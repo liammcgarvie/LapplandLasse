@@ -72,11 +72,6 @@ public class MyMovement : MonoBehaviour
     {
         return input.x * maxSpeed;
     }
-    
-    public void PositionReset()
-    {
-        transform.position = startPosition;
-    }
 
     private void Jump()
     {
@@ -106,6 +101,11 @@ public class MyMovement : MonoBehaviour
         {
             Jump();
         }
+    }
+    
+    public void PositionReset()
+    {
+        transform.position = startPosition;
     }
     
     public void StartGrapple() // Can be called with events
