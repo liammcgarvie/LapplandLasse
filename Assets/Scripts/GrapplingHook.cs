@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +10,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector3 grapplePoint;
     private DistanceJoint2D joint;
     private Vector2 direction;
+    private bool isGrappling;
     
     public UnityEvent OnGrapple;
     public UnityEvent OffGrapple;
@@ -31,9 +31,18 @@ public class GrapplingHook : MonoBehaviour
             Input.mousePosition.y,
             cam.nearClipPlane // Use the near clipping plane distance
         ));
-        
-        // Calculates the direction from the player to the mouse
-        direction = (mouseWorldPos - transform.position).normalized;
+
+        // Makes sure that you can move your mouse while grappling without affecting the direction of the grappling hook
+        if (isGrappling)
+        {
+            // Calculates the direction from the player to the grapple point/connected anchor
+            direction = (joint.connectedAnchor - new Vector2(transform.position.x , transform.position.y)).normalized;
+        }
+        else
+        {
+            // Calculates the direction from the player to the mouse
+            direction = (mouseWorldPos - transform.position).normalized;
+        }
 
         // Starts the Grapple
         if (Input.GetMouseButtonDown(0))
@@ -56,6 +65,8 @@ public class GrapplingHook : MonoBehaviour
                 rope.enabled = true;
                 rope.SetPosition(0, grapplePoint);  // Anchors end point
                 rope.SetPosition(1, transform.position); // Players position
+                
+                isGrappling = true;
             }
         }
 
@@ -65,6 +76,7 @@ public class GrapplingHook : MonoBehaviour
             OffGrapple.Invoke();
             joint.enabled = false;
             rope.enabled = false;
+            isGrappling = false;
         }
 
         // Updates the ropes player end position
