@@ -6,8 +6,7 @@ public class MyMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float jumpForce = 10f;
-    
-    public bool controlEnabled { get; set; }
+    [SerializeField] private float swingForce = 10f;
 
     private Vector2 moveInput;
     private Vector2 startPosition;
@@ -26,8 +25,6 @@ public class MyMovement : MonoBehaviour
         groundCheckCollider = GetComponent<CircleCollider2D>();
         groundCheckCollider.isTrigger = true;
         
-        controlEnabled = true;
-        
         startPosition = transform.position;
     }
 
@@ -35,9 +32,22 @@ public class MyMovement : MonoBehaviour
     {
         Vector2 currentVelocity = rb.velocity;
 
-        if (isMoving || (isGrappling == false && justGrappled == false))
+        // Using velocity based movement while not using the grappling hook
+        if (isMoving && isGrappling == false && justGrappled == false)
         {
             rb.velocity = new Vector2(TranslateInputToVelocityX(moveInput), currentVelocity.y);
+        }
+
+        // Makes the movement more realistic while grappling
+        if (isMoving && (isGrappling || justGrappled))
+        {
+            rb.AddForce(moveInput * swingForce, ForceMode2D.Impulse);
+        }
+
+        // Stops the player if it is not supposed to move
+        if (isMoving == false && isGrappling == false && justGrappled == false && isGrounded)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
         
         isGrounded = IsGrounded();
@@ -103,7 +113,7 @@ public class MyMovement : MonoBehaviour
         }
     }
     
-    public void PositionReset()
+    public void PositionReset() // Can be called with events
     {
         transform.position = startPosition;
     }
