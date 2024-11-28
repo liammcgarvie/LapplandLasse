@@ -731,7 +731,7 @@ MonoBehaviour:
     m_Bits: 8
   rope: {fileID: 863723381}
   cam: {fileID: 1417759751}
-  ropeSpeed: 10
+  ropeSpeed: 7
   OnGrapple:
     m_PersistentCalls:
       m_Calls:

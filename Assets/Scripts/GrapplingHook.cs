@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,12 +8,15 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private LayerMask grappleLayer;
     [SerializeField] private LineRenderer rope;
     [SerializeField] private Camera cam;
-    [SerializeField] private float ropeSpeed = 10;
+    [SerializeField] private float ropeSpeed = 0.1f;
     
     private Vector3 grapplePoint;
+    private Vector3 endPoint;
+    private Vector3 startPoint;
     private DistanceJoint2D joint;
     private Vector2 direction;
     private bool isGrappling;
+    private float elapsedTime;
     
     public UnityEvent OnGrapple;
     public UnityEvent OffGrapple;
@@ -64,10 +69,11 @@ public class GrapplingHook : MonoBehaviour
                 joint.enabled = true;
                 
                 rope.enabled = true;
-                rope.SetPosition(0, grapplePoint);  // Anchors end point
                 rope.SetPosition(1, transform.position); // Players position
+                rope.SetPosition(0, transform.position);  // Anchors end point
                 
                 isGrappling = true;
+                StartCoroutine(RopeAnimation());
             }
         }
 
@@ -98,5 +104,21 @@ public class GrapplingHook : MonoBehaviour
             joint.enabled = false;
         }
     }
+    
+    private IEnumerator RopeAnimation() // Makes the rope move towards the grapple point and not teleport to it
+    {
+        elapsedTime = 0f;
+        
+        startPoint = transform.position;
+        
+        while (isGrappling)
+        {
+            elapsedTime += Time.deltaTime * ropeSpeed;
+            
+            endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
+            rope.SetPosition(0, endPoint);
 
+            yield return null;
+        }
+    }
 }
