@@ -115,6 +115,7 @@ public class MyMovement : MonoBehaviour
     
     public void PositionReset() // Can be called with events
     {
+        rb.velocity = Vector2.zero;
         transform.position = startPosition;
     }
     
