@@ -6,6 +6,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private LayerMask grappleLayer;
     [SerializeField] private LineRenderer rope;
     [SerializeField] private Camera cam;
+    [SerializeField] private float ropeSpeed = 10;
     
     private Vector3 grapplePoint;
     private DistanceJoint2D joint;
@@ -61,7 +62,7 @@ public class GrapplingHook : MonoBehaviour
                 joint.connectedAnchor = grapplePoint;
                 joint.distance = Vector2.Distance(transform.position, grapplePoint);
                 joint.enabled = true;
-
+                
                 rope.enabled = true;
                 rope.SetPosition(0, grapplePoint);  // Anchors end point
                 rope.SetPosition(1, transform.position); // Players position
