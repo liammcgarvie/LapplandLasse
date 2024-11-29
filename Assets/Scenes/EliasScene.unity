@@ -732,6 +732,7 @@ MonoBehaviour:
   rope: {fileID: 863723381}
   cam: {fileID: 1417759751}
   ropeSpeed: 7
+  maxDistance: 50
   OnGrapple:
     m_PersistentCalls:
       m_Calls:
