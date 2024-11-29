@@ -22,6 +22,9 @@ public class GrapplingHook : MonoBehaviour
     public UnityEvent OnGrapple;
     public UnityEvent OffGrapple;
     
+    //TODO: Grappling hook cooldown så att man inte kan spamma
+    //TODO: Animera grappling hooken när den kommer tillbaka också
+    //TODO: 
     void Start()
     {
         // Sets joint to the local DistanceJoint2D and disables the grappling hook at the start
@@ -76,6 +79,7 @@ public class GrapplingHook : MonoBehaviour
                 isGrappling = true;
                 StartCoroutine(RopeAnimation());
 
+                // Prevents you from grappling too far
                 if (hit.distance > maxDistance)
                 {
                     joint.enabled = false;
