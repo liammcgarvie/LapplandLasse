@@ -9,6 +9,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private LineRenderer rope;
     [SerializeField] private Camera cam;
     [SerializeField] private float ropeSpeed = 0.1f;
+    [SerializeField] private float maxDistance = 100.0f;
     
     private Vector3 grapplePoint;
     private Vector3 endPoint;
@@ -74,6 +75,11 @@ public class GrapplingHook : MonoBehaviour
                 
                 isGrappling = true;
                 StartCoroutine(RopeAnimation());
+
+                if (hit.distance > maxDistance)
+                {
+                    joint.enabled = false;
+                }
             }
         }
 
@@ -99,10 +105,10 @@ public class GrapplingHook : MonoBehaviour
         }
 
         // Disables the joint if the direction is downwards
-        if (direction.y < 0)
-        {
-            joint.enabled = false;
-        }
+        //if (direction.y < 0)
+        //{
+        //    joint.enabled = false;
+        //}
     }
     
     private IEnumerator RopeAnimation() // Makes the rope move towards the grapple point and not teleport to it
