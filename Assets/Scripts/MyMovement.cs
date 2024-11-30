@@ -45,7 +45,7 @@ public class MyMovement : MonoBehaviour
         }
 
         // Stops the player if it is not supposed to move
-        if (isMoving == false && isGrappling == false && justGrappled == false && isGrounded)
+        if (isMoving == false && isGrappling == false && justGrappled == false)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
