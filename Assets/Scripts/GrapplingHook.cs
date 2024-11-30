@@ -77,7 +77,7 @@ public class GrapplingHook : MonoBehaviour
                 rope.SetPosition(0, transform.position);  // Anchors end point
                 
                 isGrappling = true;
-                StartCoroutine(RopeAnimation());
+                StartCoroutine(OnGrappleAnimation());
 
                 // Prevents you from grappling too far
                 if (hit.distance > maxDistance)
@@ -92,8 +92,9 @@ public class GrapplingHook : MonoBehaviour
         {
             OffGrapple.Invoke();
             joint.enabled = false;
-            rope.enabled = false;
             isGrappling = false;
+            
+            StartCoroutine(OffGrappleAnimation());
         }
 
         // Updates the ropes player end position
@@ -103,10 +104,10 @@ public class GrapplingHook : MonoBehaviour
         }
 
         // Disables the rope if the joint breaks
-        if (joint.enabled == false)
-        {
-            rope.enabled = false;
-        }
+        //if (joint.enabled == false)
+        //{
+        //    rope.enabled = false;
+        //}
 
         // Disables the joint if the direction is downwards
         //if (direction.y < 0)
@@ -115,8 +116,16 @@ public class GrapplingHook : MonoBehaviour
         //}
     }
     
-    private IEnumerator RopeAnimation() // Makes the rope move towards the grapple point and not teleport to it
+    private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it
     {
+        float distance = Vector3.Distance(transform.position, grapplePoint);
+
+        if (distance > maxDistance)
+        {
+            rope.enabled = false;
+            yield break;
+        }
+        
         elapsedTime = 0f;
         
         startPoint = transform.position;
@@ -130,5 +139,24 @@ public class GrapplingHook : MonoBehaviour
 
             yield return null;
         }
+    }
+    
+    private IEnumerator OffGrappleAnimation() // Makes the rope move back towards the player after releasing the grappling hook
+    {
+        elapsedTime = 0f;
+        
+        startPoint = endPoint;
+        
+        while (isGrappling == false)
+        {
+            elapsedTime += Time.deltaTime * ropeSpeed;
+            
+            endPoint = Vector3.Lerp(startPoint, transform.position, elapsedTime);
+            rope.SetPosition(0, endPoint);
+
+            yield return null;
+        }
+        
+        //rope.enabled = false;
     }
 }
