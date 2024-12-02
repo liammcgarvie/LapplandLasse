@@ -735,7 +735,7 @@ MonoBehaviour:
   hook: {fileID: 1833007455}
   ropeSpeed: 7
   maxDistance: 50
-  grappleCooldownTime: 0.3
+  grappleCooldownTime: 0
   OnGrapple:
     m_PersistentCalls:
       m_Calls:
@@ -1311,7 +1311,7 @@ GameObject:
   - component: {fileID: 841057478}
   - component: {fileID: 841057477}
   - component: {fileID: 841057476}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
