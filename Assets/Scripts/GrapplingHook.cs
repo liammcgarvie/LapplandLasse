@@ -154,7 +154,5 @@ public class GrapplingHook : MonoBehaviour
 
             yield return null;
         }
-        
-        //rope.enabled = false;
     }
 }
