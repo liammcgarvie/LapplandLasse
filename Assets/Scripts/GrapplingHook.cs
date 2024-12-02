@@ -8,6 +8,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private LayerMask grappleLayer;
     [SerializeField] private LineRenderer rope;
     [SerializeField] private Camera cam;
+    [SerializeField] private GameObject hook;
     [SerializeField] private float ropeSpeed = 0.1f;
     [SerializeField] private float maxDistance = 100.0f;
     
@@ -29,10 +30,13 @@ public class GrapplingHook : MonoBehaviour
         joint = gameObject.GetComponent<DistanceJoint2D>();
         joint.enabled = false;
         rope.enabled = false;
+        hook.SetActive(false);
     }
     
     void Update()
     {
+        hook.transform.position = transform.position;
+        
         // Convert mouse position to world space
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(
             Input.mousePosition.x,
@@ -116,6 +120,8 @@ public class GrapplingHook : MonoBehaviour
     
     private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it
     {
+        hook.SetActive(true);
+        
         float distance = Vector3.Distance(transform.position, grapplePoint);
 
         if (distance > maxDistance)
@@ -134,6 +140,7 @@ public class GrapplingHook : MonoBehaviour
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
             rope.SetPosition(0, endPoint);
+            hook.transform.position = endPoint;
 
             yield return null;
         }
@@ -151,6 +158,12 @@ public class GrapplingHook : MonoBehaviour
             
             endPoint = Vector3.Lerp(startPoint, transform.position, elapsedTime);
             rope.SetPosition(0, endPoint);
+            hook.transform.position = endPoint;
+            
+            if (hook.transform.position == transform.position)
+            {
+                hook.SetActive(false);
+            }
 
             yield return null;
         }
