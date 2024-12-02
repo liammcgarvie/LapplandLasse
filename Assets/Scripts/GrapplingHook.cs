@@ -26,7 +26,7 @@ public class GrapplingHook : MonoBehaviour
     public UnityEvent OnGrapple;
     public UnityEvent OffGrapple;
     
-    //TODO: Grappling hook cooldown så att man inte kan spamma
+    //TODO: Förbättra grappling hook cooldown så att man inte kan spamma
     void Start()
     {
         // Sets joint to the local DistanceJoint2D and disables the grappling hook at the start
