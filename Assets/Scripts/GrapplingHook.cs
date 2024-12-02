@@ -11,6 +11,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private GameObject hook;
     [SerializeField] private float ropeSpeed = 0.1f;
     [SerializeField] private float maxDistance = 100.0f;
+    [SerializeField] private float grappleCooldownTime = 0.5f;
     
     private Vector3 grapplePoint;
     private Vector3 endPoint;
@@ -18,7 +19,9 @@ public class GrapplingHook : MonoBehaviour
     private DistanceJoint2D joint;
     private Vector2 direction;
     private bool isGrappling;
+    private bool canGrapple;
     private float elapsedTime;
+    private float grappleCooldownTimer;
     
     public UnityEvent OnGrapple;
     public UnityEvent OffGrapple;
@@ -31,10 +34,24 @@ public class GrapplingHook : MonoBehaviour
         joint.enabled = false;
         rope.enabled = false;
         hook.SetActive(false);
+        canGrapple = true;
+        grappleCooldownTimer = 0;
     }
     
     void Update()
     {
+        // Makes it so that you cant spam the grappling hook
+        if (canGrapple == false)
+        {
+            grappleCooldownTimer += Time.deltaTime;
+            
+            if (grappleCooldownTimer >= grappleCooldownTime)
+            {
+                canGrapple = true;
+                grappleCooldownTimer = 0;
+            }
+        }
+        
         hook.transform.position = transform.position;
         
         // Convert mouse position to world space
@@ -66,7 +83,7 @@ public class GrapplingHook : MonoBehaviour
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
             // Starts grappling if the raycast hits a viable layer and if the direction is not downwards
-            if (hit.collider && direction.y >= 0)
+            if (hit.collider && direction.y >= 0 && canGrapple)
             {
                 OnGrapple.Invoke();
                 grapplePoint = hit.point;
@@ -95,6 +112,7 @@ public class GrapplingHook : MonoBehaviour
             OffGrapple.Invoke();
             joint.enabled = false;
             isGrappling = false;
+            canGrapple = false;
             
             StartCoroutine(OffGrappleAnimation());
         }

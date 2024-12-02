@@ -735,6 +735,7 @@ MonoBehaviour:
   hook: {fileID: 1833007455}
   ropeSpeed: 7
   maxDistance: 50
+  grappleCooldownTime: 0.3
   OnGrapple:
     m_PersistentCalls:
       m_Calls:
