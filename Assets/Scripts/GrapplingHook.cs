@@ -109,10 +109,13 @@ public class GrapplingHook : MonoBehaviour
         // Ends the Grapple
         if (Input.GetMouseButtonUp(0))
         {
+            if (isGrappling)
+            {
+                canGrapple = false;
+            }
             OffGrapple.Invoke();
             joint.enabled = false;
             isGrappling = false;
-            canGrapple = false;
             
             StartCoroutine(OffGrappleAnimation());
         }
