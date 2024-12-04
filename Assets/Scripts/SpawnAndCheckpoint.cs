@@ -11,9 +11,9 @@ public class SpawnAndCheckpoint : MonoBehaviour
         respawnPoint = transform.position;
     }
     
-    public void CheckpointEntered() // Can be called with events
+    public void CheckpointEntered(Vector3 checkpointPosition) // Can be called with events
     {
-        respawnPoint = transform.position;
+        respawnPoint = checkpointPosition;
     }
 
     public void Respawn() // Can be called with events
