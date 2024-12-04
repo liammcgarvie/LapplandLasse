@@ -147,7 +147,7 @@ MonoBehaviour:
   triggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1746762142075763176, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
         m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
         m_MethodName: Respawn
         m_Mode: 1
