@@ -470,6 +470,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
+      propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2118204746}
     - target: {fileID: 3295998853689600078, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: m_Size.x
       value: 2
