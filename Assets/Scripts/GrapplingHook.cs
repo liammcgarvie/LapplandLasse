@@ -19,6 +19,8 @@ public class GrapplingHook : MonoBehaviour
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
     [SerializeField] private float grappleCooldownTime = 0.5f;
     
+    [SerializeField] private AudioSource grappleSound;
+    
     private Vector3 grapplePoint;
     private Vector3 endPoint;
     private Vector3 startPoint;
@@ -26,6 +28,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector2 direction;
     private bool isGrappling;
     private bool canGrapple;
+    private bool canPlayGrappleSound;
     private float elapsedTime;
     private float grappleCooldownTimer;
     
@@ -149,6 +152,8 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
+        canPlayGrappleSound = true;
+        
         while (isGrappling)
         {
             elapsedTime += Time.deltaTime * ropeSpeed;
@@ -156,6 +161,12 @@ public class GrapplingHook : MonoBehaviour
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
             rope.SetPosition(0, endPoint);
             hook.transform.position = endPoint;
+            
+            if (hook.transform.position == grapplePoint && canPlayGrappleSound)
+            {
+                grappleSound.Play();
+                canPlayGrappleSound = false;
+            }
 
             yield return null;
         }
