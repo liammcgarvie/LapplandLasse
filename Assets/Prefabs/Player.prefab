@@ -316,7 +316,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14.946869
+  orthographic size: 10.41
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -557,7 +557,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  maxSpeed: 10
+  speed: 10
   jumpForce: 500
   swingForce: 0.2
 --- !u!114 &3153923164087561910
@@ -629,7 +629,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.630014
+  m_Distance: 30.029026
   m_MaxDistanceOnly: 0
 --- !u!114 &8577539548966137743
 MonoBehaviour:
