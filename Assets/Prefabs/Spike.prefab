@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0038585663, y: -0.03172341}
+  m_Offset: {x: 0.0004386902, y: -0.01739642}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24646378, y: 0.5138865}
+  m_Size: {x: 0.30091095, y: 0.5425405}
   m_EdgeRadius: 0
 --- !u!114 &871486625087947327
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   triggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1746762142075763176, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
         m_MethodName: Respawn
         m_Mode: 1
@@ -160,5 +160,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerEnterWithPosition:
     m_PersistentCalls:
       m_Calls: []
