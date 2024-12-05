@@ -146,11 +146,17 @@ MonoBehaviour:
   activationTag: Player
   triggerEnter:
     m_PersistentCalls:
+      m_Calls: []
+  triggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerEnterWithPosition:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1746762142075763176, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
         m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
         m_MethodName: CheckpointEntered
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -159,6 +165,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  triggerExit:
-    m_PersistentCalls:
-      m_Calls: []
