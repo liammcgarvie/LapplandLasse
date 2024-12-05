@@ -17,4 +17,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
+
+    public void MenuScene()
+    {
+        SceneManager.LoadScene("Titelscene");
+    }
 }
