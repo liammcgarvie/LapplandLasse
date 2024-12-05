@@ -1,16 +1,22 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GrapplingHook : MonoBehaviour
 {
+    [Tooltip("This is the layer on which you can grapple onto")]
     [SerializeField] private LayerMask grappleLayer;
+    [Tooltip("This is the rope object (the object needs a LineRenderer component)")]
     [SerializeField] private LineRenderer rope;
+    [Tooltip("This is the camera which will be used to cast the rope object (the main camera most likely)")]
     [SerializeField] private Camera cam;
+    [Tooltip("This is the hook object (can be a sprite for example)")]
     [SerializeField] private GameObject hook;
+    [Tooltip("This is the speed of the grappling hook when you shoot it at a roof or a wall (the speed of the rope animation)")]
     [SerializeField] private float ropeSpeed = 0.1f;
+    [Tooltip("This is the max distance in which you can grapple")]
     [SerializeField] private float maxDistance = 100.0f;
+    [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
     [SerializeField] private float grappleCooldownTime = 0.5f;
     
     private Vector3 grapplePoint;
@@ -26,16 +32,16 @@ public class GrapplingHook : MonoBehaviour
     public UnityEvent OnGrapple;
     public UnityEvent OffGrapple;
     
-    //TODO: Förbättra grappling hook cooldown så att man inte kan spamma
+    //TODO: Förbättra grappling hook cooldown
     void Start()
     {
-        // Sets joint to the local DistanceJoint2D and disables the grappling hook at the start
+        // Sets joint to the local DistanceJoint2D
         joint = gameObject.GetComponent<DistanceJoint2D>();
-        joint.enabled = false;
+        joint.enabled = false; // Disables the grappling hook at the start
         rope.enabled = false;
-        hook.SetActive(false);
-        canGrapple = true;
-        grappleCooldownTimer = 0;
+        hook.SetActive(false); // Disables the hook object in the start
+        canGrapple = true; // canGrapple is related to grappling hook cooldown
+        grappleCooldownTimer = 0; // grappleCooldownTimer is related to grappling hook cooldown
     }
     
     void Update()
@@ -45,7 +51,7 @@ public class GrapplingHook : MonoBehaviour
         {
             grappleCooldownTimer += Time.deltaTime;
             
-            if (grappleCooldownTimer >= grappleCooldownTime)
+            if (grappleCooldownTimer >= grappleCooldownTime) // You can set your own cooldown time
             {
                 canGrapple = true;
                 grappleCooldownTimer = 0;
@@ -125,18 +131,6 @@ public class GrapplingHook : MonoBehaviour
         {
             rope.SetPosition(1, transform.position);
         }
-
-        // Disables the rope if the joint breaks
-        //if (joint.enabled == false)
-        //{
-        //    rope.enabled = false;
-        //}
-
-        // Disables the joint if the direction is downwards
-        //if (direction.y < 0)
-        //{
-        //    joint.enabled = false;
-        //}
     }
     
     private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it

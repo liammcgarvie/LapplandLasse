@@ -3,9 +3,13 @@ using UnityEngine.InputSystem;
 
 public class MyMovement : MonoBehaviour
 {
+    [Tooltip("This is the layer where a player will be able to jump")]
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float maxSpeed = 10f;
+    [Tooltip("This is the speed of the player")]
+    [SerializeField] private float speed = 10f;
+    [Tooltip("This is the force that is put upon the player when you jump")]
     [SerializeField] private float jumpForce = 10f;
+    [Tooltip("This is the force that is put upon the player when you are moving while using the grappling hook")]
     [SerializeField] private float swingForce = 10f;
 
     private Vector2 moveInput;
@@ -80,7 +84,7 @@ public class MyMovement : MonoBehaviour
 
     float TranslateInputToVelocityX(Vector2 input)
     {
-        return input.x * maxSpeed;
+        return input.x * speed;
     }
 
     private void Jump()
