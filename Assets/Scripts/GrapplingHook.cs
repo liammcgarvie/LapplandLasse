@@ -29,6 +29,8 @@ public class GrapplingHook : MonoBehaviour
     private bool isGrappling;
     private bool canGrapple;
     private bool canPlayGrappleSound;
+    private bool isPressing;
+    private bool shooting;
     private float elapsedTime;
     private float grappleCooldownTimer;
     
@@ -36,6 +38,8 @@ public class GrapplingHook : MonoBehaviour
     public UnityEvent OffGrapple;
     
     //TODO: Förbättra grappling hook cooldown
+    //TODO: Fixa MissedGrappleAnimation så att den fungerar efter man använt grappling hooken
+    //TODO: Fixa så att man inte behöver byta direction knapp när man snurrar runt saker
     void Start()
     {
         // Sets joint to the local DistanceJoint2D
@@ -61,8 +65,6 @@ public class GrapplingHook : MonoBehaviour
             }
         }
         
-        hook.transform.position = transform.position;
-        
         // Convert mouse position to world space
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(
             Input.mousePosition.x,
@@ -85,12 +87,27 @@ public class GrapplingHook : MonoBehaviour
         // Starts the Grapple
         if (Input.GetMouseButtonDown(0))
         {
+            isPressing = true;
+            
+            hook.SetActive(true);
+            
             // Performs a raycast in the calculated direction
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, grappleLayer);
 
             // Debugs the ray to visualize it in the Scene view
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
+            if (hit.collider == false && direction.y >= 0 && canGrapple)
+            {
+                grapplePoint = mouseWorldPos;
+            
+                rope.enabled = true;
+                rope.SetPosition(1, transform.position); // Players position
+                rope.SetPosition(0, transform.position); // Anchors end point
+            
+                StartCoroutine(MissedGrappleAnimation());
+            }
+            
             // Starts grappling if the raycast hits a viable layer and if the direction is not downwards
             if (hit.collider && direction.y >= 0 && canGrapple)
             {
@@ -118,21 +135,29 @@ public class GrapplingHook : MonoBehaviour
         // Ends the Grapple
         if (Input.GetMouseButtonUp(0))
         {
+            isPressing = false;
+            
             if (isGrappling)
             {
                 canGrapple = false;
-            }
-            OffGrapple.Invoke();
-            joint.enabled = false;
-            isGrappling = false;
+                OffGrapple.Invoke();
+                joint.enabled = false;
+                isGrappling = false;
             
-            StartCoroutine(OffGrappleAnimation());
+                StartCoroutine(OffGrappleAnimation());
+            }
         }
 
         // Updates the ropes player end position
         if (rope.enabled)
         {
             rope.SetPosition(1, transform.position);
+        }
+
+        //Borde inte funka som jag vill men det funkar
+        if (isPressing == false)
+        {
+            hook.transform.position = transform.position;
         }
     }
     
@@ -154,7 +179,7 @@ public class GrapplingHook : MonoBehaviour
         
         canPlayGrappleSound = true;
         
-        while (isGrappling)
+        while (isPressing)
         {
             elapsedTime += Time.deltaTime * ropeSpeed;
             
@@ -166,6 +191,7 @@ public class GrapplingHook : MonoBehaviour
             {
                 grappleSound.Play();
                 canPlayGrappleSound = false;
+                yield break;
             }
 
             yield return null;
@@ -189,8 +215,55 @@ public class GrapplingHook : MonoBehaviour
             if (hook.transform.position == transform.position)
             {
                 hook.SetActive(false);
+                rope.enabled = false;
+                yield break;
             }
 
+            yield return null;
+        }
+    }
+
+    private IEnumerator MissedGrappleAnimation()
+    {
+        elapsedTime = 0;
+        
+        startPoint = transform.position;
+        
+        shooting = true;
+
+        while (shooting)
+        {
+            elapsedTime += Time.deltaTime * ropeSpeed;
+            
+            endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
+            rope.SetPosition(0, endPoint);
+            hook.transform.position = endPoint;
+
+            if (hook.transform.position == grapplePoint)
+            {
+                shooting = false;
+                startPoint = endPoint;
+                elapsedTime = 0;
+            }
+            
+            yield return null;
+        }
+
+        while (shooting == false)
+        {
+            elapsedTime += Time.deltaTime * ropeSpeed;
+            
+            endPoint = Vector3.Lerp(startPoint, transform.position, elapsedTime);
+            rope.SetPosition(0, endPoint);
+            hook.transform.position = endPoint;
+            
+            if (hook.transform.position == transform.position)
+            {
+                hook.SetActive(false);
+                rope.enabled = false;
+                yield break;
+            }
+            
             yield return null;
         }
     }
