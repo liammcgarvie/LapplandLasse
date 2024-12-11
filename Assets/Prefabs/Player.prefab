@@ -558,6 +558,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  playerSprite: {fileID: 4984417615925542473}
   maxSpeed: 10
   jumpForce: 500
   swingForce: 0.2

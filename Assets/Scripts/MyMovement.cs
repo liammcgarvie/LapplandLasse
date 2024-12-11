@@ -6,6 +6,8 @@ public class MyMovement : MonoBehaviour
 {
     [Tooltip("This is the layer where a player will be able to jump")]
     [SerializeField] private LayerMask groundLayer;
+    [Tooltip("This is the layer where a player will be able to jump")]
+    [SerializeField] private SpriteRenderer playerSprite;
     [Tooltip("This is the speed of the player")]
     [SerializeField] private float maxSpeed = 10f;
     [Tooltip("This is the force that is put upon the player when you jump")]
@@ -94,6 +96,18 @@ public class MyMovement : MonoBehaviour
 
     private void Update()
     {
+        // Flips the sprite
+        if (rb.velocity.x > 0.01f)
+        {
+            playerSprite.flipX = false;
+        }
+        
+        // Flips the sprite
+        if (rb.velocity.x < -0.01f)
+        {
+            playerSprite.flipX = true;
+        }
+        
         // If you are grappling justGrappled is set to true
         if (isGrappling)
         {
