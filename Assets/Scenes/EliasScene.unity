@@ -2471,30 +2471,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8577539548966137743, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8577539548966137743, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8494258460868232823}
-    - target: {fileID: 8577539548966137743, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8577539548966137743, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoseHealth
-      objectReference: {fileID: 0}
-    - target: {fileID: 8577539548966137743, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HealthSystem, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8577539548966137743, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8917524484241939389, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01
@@ -2540,17 +2516,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
---- !u!114 &8494258460868232823 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5500324866481760083, guid: 0f9dc468830239e40a88db17410f760a, type: 3}
-  m_PrefabInstance: {fileID: 8494258460868232822}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f18d4a316715ac47a2c8f09d15becdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
