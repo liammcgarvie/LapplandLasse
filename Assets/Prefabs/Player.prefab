@@ -558,9 +558,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  speed: 10
+  maxSpeed: 10
   jumpForce: 500
   swingForce: 0.2
+  acceleration: 5
+  deceleration: 30
 --- !u!114 &3153923164087561910
 MonoBehaviour:
   m_ObjectHideFlags: 0
