@@ -31,7 +31,7 @@ public class MyMovement : MonoBehaviour
     private Rigidbody2D rb;
     private CircleCollider2D groundCheckCollider;
 
-    //TODO: Fixa acceleration och momentum i movementet (helt enkelt gör om nästan allt)
+    //TODO: Fixa acceleration glitch
     
     private void Awake()
     {
