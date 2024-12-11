@@ -167,7 +167,7 @@ public class GrapplingHook : MonoBehaviour
 
         if (distance > maxDistance)
         {
-            rope.enabled = false;
+            StartCoroutine(MissedGrappleAnimation());
             yield break;
         }
         
@@ -230,6 +230,8 @@ public class GrapplingHook : MonoBehaviour
         startPoint = transform.position;
         
         shooting = true;
+        
+        hook.SetActive(true);
 
         while (shooting)
         {
