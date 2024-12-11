@@ -89,8 +89,6 @@ public class GrapplingHook : MonoBehaviour
         {
             isPressing = true;
             
-            hook.SetActive(true);
-            
             // Performs a raycast in the calculated direction
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, grappleLayer);
 
@@ -99,6 +97,8 @@ public class GrapplingHook : MonoBehaviour
 
             if (hit.collider == false && direction.y >= 0 && canGrapple)
             {
+                hook.SetActive(true);
+                
                 grapplePoint = mouseWorldPos;
             
                 rope.enabled = true;
@@ -163,8 +163,6 @@ public class GrapplingHook : MonoBehaviour
     
     private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it
     {
-        hook.SetActive(true);
-        
         float distance = Vector3.Distance(transform.position, grapplePoint);
 
         if (distance > maxDistance)
@@ -172,6 +170,8 @@ public class GrapplingHook : MonoBehaviour
             rope.enabled = false;
             yield break;
         }
+        
+        hook.SetActive(true);
         
         elapsedTime = 0f;
         
