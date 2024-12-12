@@ -18,6 +18,8 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float ropeSpeed = 0.1f;
     [Tooltip("This is the speed of the grappling hook when you shoot it at an enemy (the speed of the rope animation)")]
     [SerializeField] private float enemyRopeSpeed = 0.1f;
+    [Tooltip("This is the extra length of the rope when grappling towards an enemy")]
+    [SerializeField] private float enemyRopeLength = 10f;
     [Tooltip("This is the max distance in which you can grapple")]
     [SerializeField] private float maxDistance = 100.0f;
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
@@ -105,8 +107,17 @@ public class GrapplingHook : MonoBehaviour
             if (enemyHit.collider && canGrapple)
             {
                 hook.SetActive(true);
+
+                if (enemyHit.point.x > transform.position.x)
+                {
+                    grapplePoint = enemyHit.point + new Vector2(enemyRopeLength, 0);
+                }
                 
-                grapplePoint = enemyHit.point;
+                if (enemyHit.point.x < transform.position.x)
+                {
+                    grapplePoint = enemyHit.point - new Vector2(enemyRopeLength, 0);
+                }
+                
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
@@ -309,15 +320,12 @@ public class GrapplingHook : MonoBehaviour
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
             rope.SetPosition(0, endPoint);
             hook.transform.position = endPoint;
-
+            
             if (hook.transform.position == grapplePoint)
             {
                 shooting = false;
                 startPoint = endPoint;
                 elapsedTime = 0;
-                
-                grappleSound.Play();
-                canPlayGrappleSound = false;
             }
             
             yield return null;
@@ -340,5 +348,15 @@ public class GrapplingHook : MonoBehaviour
             
             yield return null;
         }
+    }
+
+    public void EnemyHit() // Can be used with events
+    {
+        shooting = false;
+        startPoint = endPoint;
+        elapsedTime = 0;
+                
+        grappleSound.Play();
+        canPlayGrappleSound = false;
     }
 }

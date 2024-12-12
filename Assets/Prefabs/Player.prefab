@@ -310,6 +310,21 @@ MonoBehaviour:
   player: {fileID: 7370871269698370318}
   rope: {fileID: 5556790958711115659}
   offsetX: 1
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3153923164087561910}
+        m_TargetAssemblyTypeName: GrapplingHook, Assembly-CSharp
+        m_MethodName: EnemyHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6428190054136050954
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +665,7 @@ MonoBehaviour:
   hook: {fileID: 5843381836181899019}
   ropeSpeed: 7
   enemyRopeSpeed: 3
+  enemyRopeLength: 10
   maxDistance: 50
   grappleCooldownTime: 0
   grappleSound: {fileID: 6905613101147157543}

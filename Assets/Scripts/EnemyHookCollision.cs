@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyHookCollision : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class EnemyHookCollision : MonoBehaviour
     private Vector3 playerPos;
     
     private Transform pullTarget;
-
+    
+    public UnityEvent OnHit;
+    
     private void Awake()
     {
         pulling = false;
@@ -51,6 +54,7 @@ public class EnemyHookCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            OnHit.Invoke();
             playerPos = player.transform.position;
             pulling = true;
             pullTarget = other.transform;
