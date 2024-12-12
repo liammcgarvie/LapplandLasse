@@ -6,6 +6,8 @@ public class GrapplingHook : MonoBehaviour
 {
     [Tooltip("This is the layer on which you can grapple onto")]
     [SerializeField] private LayerMask grappleLayer;
+    [Tooltip("This is the layer on which you can pull things toward you")]
+    [SerializeField] private LayerMask enemyPullLayer;
     [Tooltip("This is the rope object (the object needs a LineRenderer component)")]
     [SerializeField] private LineRenderer rope;
     [Tooltip("This is the camera which will be used to cast the rope object (the main camera most likely)")]
@@ -38,7 +40,6 @@ public class GrapplingHook : MonoBehaviour
     public UnityEvent OffGrapple;
     
     //TODO: Förbättra grappling hook cooldown
-    //TODO: Fixa MissedGrappleAnimation så att den fungerar efter man använt grappling hooken
     //TODO: Fixa så att man inte behöver byta direction knapp när man snurrar runt saker
     void Start()
     {
@@ -90,12 +91,12 @@ public class GrapplingHook : MonoBehaviour
             isPressing = true;
             
             // Performs a raycast in the calculated direction
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, grappleLayer);
+            RaycastHit2D grappleHit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, grappleLayer);
 
             // Debugs the ray to visualize it in the Scene view
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
-            if (hit.collider == false && direction.y >= 0 && canGrapple)
+            if (grappleHit.collider == false && direction.y >= 0 && canGrapple)
             {
                 hook.SetActive(true);
                 
@@ -109,10 +110,10 @@ public class GrapplingHook : MonoBehaviour
             }
             
             // Starts grappling if the raycast hits a viable layer and if the direction is not downwards
-            if (hit.collider && direction.y >= 0 && canGrapple)
+            if (grappleHit.collider && direction.y >= 0 && canGrapple)
             {
                 OnGrapple.Invoke();
-                grapplePoint = hit.point;
+                grapplePoint = grappleHit.point;
                 joint.connectedAnchor = grapplePoint;
                 joint.distance = Vector2.Distance(transform.position, grapplePoint);
                 joint.enabled = true;
@@ -125,7 +126,7 @@ public class GrapplingHook : MonoBehaviour
                 StartCoroutine(OnGrappleAnimation());
 
                 // Prevents you from grappling too far
-                if (hit.distance > maxDistance)
+                if (grappleHit.distance > maxDistance)
                 {
                     joint.enabled = false;
                 }
