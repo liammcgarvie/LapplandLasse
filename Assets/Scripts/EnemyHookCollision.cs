@@ -5,6 +5,7 @@ public class EnemyHookCollision : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private LineRenderer rope;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private float offsetX = 1.0f;
     
     private bool pulling;
@@ -24,6 +25,8 @@ public class EnemyHookCollision : MonoBehaviour
     {
         if (pulling)
         {
+            playerAnimator.SetBool("isPulling", true);
+            
             player.transform.position = playerPos;
             
             if (pullTarget.transform.position.x > player.transform.position.x)
@@ -47,6 +50,11 @@ public class EnemyHookCollision : MonoBehaviour
                 pullTarget = null;
                 pulling = false;
             }
+        }
+        
+        if (pulling == false)
+        {
+            playerAnimator.SetBool("isPulling", false);
         }
     }
     

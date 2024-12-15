@@ -474,6 +474,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerSprite: {fileID: 3330288699802353284}
+  playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 10
   jumpForce: 500
   swingForce: 0.2
@@ -795,6 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1949567870988115298}
   rope: {fileID: 1044483492571396677}
+  playerAnimator: {fileID: 2641195189766255520}
   offsetX: 1
   OnHit:
     m_PersistentCalls:

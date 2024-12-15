@@ -6,8 +6,10 @@ public class MyMovement : MonoBehaviour
 {
     [Tooltip("This is the layer where a player will be able to jump")]
     [SerializeField] private LayerMask groundLayer;
-    [Tooltip("This is the layer where a player will be able to jump")]
+    [Tooltip("This is the player sprite renderer")]
     [SerializeField] private SpriteRenderer playerSprite;
+    [Tooltip("This is the player animator")]
+    [SerializeField] private Animator playerAnimator;
     [Tooltip("This is the speed of the player")]
     [SerializeField] private float maxSpeed = 10f;
     [Tooltip("This is the force that is put upon the player when you jump")]
@@ -96,17 +98,7 @@ public class MyMovement : MonoBehaviour
 
     private void Update()
     {
-        // Flips the sprite
-        if (rb.velocity.x > 0.01f)
-        {
-            playerSprite.flipX = false;
-        }
-        
-        // Flips the sprite
-        if (rb.velocity.x < -0.01f)
-        {
-            playerSprite.flipX = true;
-        }
+        AnimationController();
         
         // If you are grappling justGrappled is set to true
         if (isGrappling)
@@ -194,6 +186,68 @@ public class MyMovement : MonoBehaviour
     public void EndGrapple() // Can be called with events
     {
         isGrappling = false;
+    }
+
+    private void AnimationBoolsFalse()
+    {
+        playerAnimator.SetBool("isWalking", false);
+        playerAnimator.SetBool("isRunning", false);
+        playerAnimator.SetBool("isJumping", false);
+        playerAnimator.SetBool("isPulling", false);
+        playerAnimator.SetBool("isSwinging", false);
+    }
+
+    private void AnimationController()
+    {
+        // Flips the sprite
+        if (rb.velocity.x > 0.01f)
+        {
+            playerSprite.flipX = false;
+        }
+        
+        // Flips the sprite
+        if (rb.velocity.x < -0.01f)
+        {
+            playerSprite.flipX = true;
+        }
+        
+        // Sets animation to idle
+        if (Mathf.Abs(rb.velocity.x) == 0 && isGrounded)
+        {
+            AnimationBoolsFalse();
+        }
+
+        // Sets animation to walking
+        if (Mathf.Abs(rb.velocity.x) > 0.01f && isGrounded)
+        {
+            AnimationBoolsFalse();
+            
+            playerAnimator.SetBool("isWalking", true);
+        }
+        
+        // Sets animation to running
+        if (Mathf.Abs(rb.velocity.x) >= maxSpeed && isGrounded)
+        {
+            AnimationBoolsFalse();
+            
+            playerAnimator.SetBool("isRunning", true);
+        }
+
+        // Sets animation to swinging
+        if ((isGrappling || justGrappled) && isGrounded == false)
+        {
+            AnimationBoolsFalse();
+            
+            playerAnimator.SetBool("isSwinging", true);
+        }
+
+        // Sets animation to jumping
+        if (isGrounded == false && isGrappling == false && justGrappled == false)
+        {
+            AnimationBoolsFalse();
+            
+            playerAnimator.SetBool("isJumping", true);
+        }
     }
 }
 
