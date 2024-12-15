@@ -188,7 +188,8 @@ public class MyMovement : MonoBehaviour
         isGrappling = false;
     }
 
-    private void AnimationBoolsFalse()
+    // Sets all animator booleans to false
+    private void AnimationBooleansFalse()
     {
         playerAnimator.SetBool("isWalking", false);
         playerAnimator.SetBool("isRunning", false);
@@ -214,13 +215,13 @@ public class MyMovement : MonoBehaviour
         // Sets animation to idle
         if (Mathf.Abs(rb.velocity.x) == 0 && isGrounded)
         {
-            AnimationBoolsFalse();
+            AnimationBooleansFalse();
         }
 
         // Sets animation to walking
         if (Mathf.Abs(rb.velocity.x) > 0.01f && isGrounded)
         {
-            AnimationBoolsFalse();
+            AnimationBooleansFalse();
             
             playerAnimator.SetBool("isWalking", true);
         }
@@ -228,7 +229,7 @@ public class MyMovement : MonoBehaviour
         // Sets animation to running
         if (Mathf.Abs(rb.velocity.x) >= maxSpeed && isGrounded)
         {
-            AnimationBoolsFalse();
+            AnimationBooleansFalse();
             
             playerAnimator.SetBool("isRunning", true);
         }
@@ -236,7 +237,7 @@ public class MyMovement : MonoBehaviour
         // Sets animation to swinging
         if ((isGrappling || justGrappled) && isGrounded == false)
         {
-            AnimationBoolsFalse();
+            AnimationBooleansFalse();
             
             playerAnimator.SetBool("isSwinging", true);
         }
@@ -244,7 +245,7 @@ public class MyMovement : MonoBehaviour
         // Sets animation to jumping
         if (isGrounded == false && isGrappling == false && justGrappled == false)
         {
-            AnimationBoolsFalse();
+            AnimationBooleansFalse();
             
             playerAnimator.SetBool("isJumping", true);
         }
