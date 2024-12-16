@@ -10,6 +10,8 @@ public class MyMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     [Tooltip("This is the player grappling hook arm sprite renderer")]
     [SerializeField] private SpriteRenderer armSprite;
+    [Tooltip("This is the player grappling hook arm sprite renderer while grappling")]
+    [SerializeField] private SpriteRenderer grappleArmSprite;
     [Tooltip("This is the player animator")]
     [SerializeField] private Animator playerAnimator;
     [Tooltip("This is the speed of the player")]

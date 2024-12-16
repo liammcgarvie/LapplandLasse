@@ -475,6 +475,7 @@ MonoBehaviour:
     m_Bits: 8
   playerSprite: {fileID: 3330288699802353284}
   armSprite: {fileID: 8809238936077230155}
+  grappleArmSprite: {fileID: 2531558385380118913}
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 10
   jumpForce: 500
