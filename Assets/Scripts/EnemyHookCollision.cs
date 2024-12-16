@@ -3,12 +3,17 @@ using UnityEngine.Events;
 
 public class EnemyHookCollision : MonoBehaviour
 {
+    [Tooltip("This is the layer where a player will be able to jump")]
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private CircleCollider2D groundCheckCollider;
     [SerializeField] private GameObject player;
+    [SerializeField] private Rigidbody2D playerRb;
     [SerializeField] private LineRenderer rope;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private float offsetX = 1.0f;
     
     private bool pulling;
+    private bool isGrounded;
 
     private Vector3 playerPos;
     
@@ -23,23 +28,16 @@ public class EnemyHookCollision : MonoBehaviour
 
     private void Update()
     {
-        if (pulling)
+        isGrounded = IsGrounded();
+        
+        if (pulling && isGrounded)
         {
-            playerAnimator.SetBool("isPulling", true);
-            
-            player.transform.position = playerPos;
-            
-            if (pullTarget.transform.position.x > player.transform.position.x)
-            {
-                pullTarget.position = rope.GetPosition(0);
-                pullTarget.position += new Vector3(offsetX, 0, 0);
-            }
-            
-            if (pullTarget.transform.position.x < player.transform.position.x)
-            {
-                pullTarget.position = rope.GetPosition(0);
-                pullTarget.position -= new Vector3(offsetX, 0, 0);
-            }
+            GroundedEnemyPull();
+        }
+
+        if (pulling && isGrounded == false)
+        {
+            ElevatedEnemyPull();
         }
 
         if (pullTarget)
@@ -55,6 +53,55 @@ public class EnemyHookCollision : MonoBehaviour
         if (pulling == false)
         {
             playerAnimator.SetBool("isPulling", false);
+            playerRb.bodyType = RigidbodyType2D.Dynamic;
+        }
+    }
+    
+    private bool IsGrounded() // Checks if the player is on the ground
+    {
+        if (groundCheckCollider.IsTouchingLayers(groundLayer))
+        {
+            return true;
+        }
+        
+        return false;
+    }
+
+    private void GroundedEnemyPull()
+    {
+        playerAnimator.SetBool("isPulling", true);
+            
+        player.transform.position = playerPos;
+            
+        if (pullTarget.transform.position.x > player.transform.position.x)
+        {
+            pullTarget.position = rope.GetPosition(0);
+            pullTarget.position += new Vector3(offsetX, 0, 0);
+        }
+            
+        if (pullTarget.transform.position.x < player.transform.position.x)
+        {
+            pullTarget.position = rope.GetPosition(0);
+            pullTarget.position -= new Vector3(offsetX, 0, 0);
+        }
+    }
+
+    private void ElevatedEnemyPull()
+    {
+        playerAnimator.SetBool("isPulling", true);
+        
+        playerRb.bodyType = RigidbodyType2D.Static;
+        
+        if (pullTarget.transform.position.x > player.transform.position.x)
+        {
+            pullTarget.position = rope.GetPosition(0);
+            pullTarget.position += new Vector3(offsetX, 0, 0);
+        }
+            
+        if (pullTarget.transform.position.x < player.transform.position.x)
+        {
+            pullTarget.position = rope.GetPosition(0);
+            pullTarget.position -= new Vector3(offsetX, 0, 0);
         }
     }
     

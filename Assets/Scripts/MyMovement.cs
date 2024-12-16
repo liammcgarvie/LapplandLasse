@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class MyMovement : MonoBehaviour
@@ -36,6 +37,9 @@ public class MyMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private CircleCollider2D groundCheckCollider;
+    
+    public UnityEvent OnGrounded;
+    public UnityEvent OffGrounded;
 
     //TODO: Fixa acceleration glitch
     
@@ -96,12 +100,24 @@ public class MyMovement : MonoBehaviour
                 rb.velocity = new Vector2(0f, rb.velocity.y);
             }
         }
-        
-        isGrounded = IsGrounded();
     }
 
     private void Update()
     {
+        isGrounded = IsGrounded();
+        
+        // This is used to switch the isGrounded variable in other scripts aswell
+        switch (isGrounded)
+        {
+            case true:
+                OnGrounded.Invoke();
+                break;
+            case false:
+                OffGrounded.Invoke();
+                break;
+        }
+
+
         AnimationController();
         
         // If you are grappling justGrappled is set to true
@@ -208,6 +224,7 @@ public class MyMovement : MonoBehaviour
         if (rb.velocity.x > 0.01f)
         {
             armSprite.flipX = false;
+            grappleArmSprite.flipX = false;
             playerSprite.flipX = false;
         }
         
@@ -215,6 +232,7 @@ public class MyMovement : MonoBehaviour
         if (rb.velocity.x < -0.01f)
         {
             armSprite.flipX = true;
+            grappleArmSprite.flipX = true;
             playerSprite.flipX = true;
         }
         
