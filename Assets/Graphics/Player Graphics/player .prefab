@@ -474,6 +474,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerSprite: {fileID: 3330288699802353284}
+  armSprite: {fileID: 8809238936077230155}
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 10
   jumpForce: 500

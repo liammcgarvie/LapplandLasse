@@ -8,6 +8,8 @@ public class MyMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [Tooltip("This is the player sprite renderer")]
     [SerializeField] private SpriteRenderer playerSprite;
+    [Tooltip("This is the player grappling hook arm sprite renderer")]
+    [SerializeField] private SpriteRenderer armSprite;
     [Tooltip("This is the player animator")]
     [SerializeField] private Animator playerAnimator;
     [Tooltip("This is the speed of the player")]
@@ -203,12 +205,14 @@ public class MyMovement : MonoBehaviour
         // Flips the sprite
         if (rb.velocity.x > 0.01f)
         {
+            armSprite.flipX = false;
             playerSprite.flipX = false;
         }
         
         // Flips the sprite
         if (rb.velocity.x < -0.01f)
         {
+            armSprite.flipX = true;
             playerSprite.flipX = true;
         }
         
