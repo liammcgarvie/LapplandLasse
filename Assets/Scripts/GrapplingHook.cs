@@ -120,12 +120,26 @@ public class GrapplingHook : MonoBehaviour
 
                 if (enemyHit.point.x > transform.position.x)
                 {
-                    grapplePoint = enemyHit.point + new Vector2(enemyRopeLength, 0);
+                    if (isGrounded)
+                    {
+                        grapplePoint = enemyHit.point + new Vector2(enemyRopeLength, 0);
+                    }
+                    else
+                    {
+                        grapplePoint = enemyHit.point;
+                    }
                 }
                 
                 if (enemyHit.point.x < transform.position.x)
                 {
-                    grapplePoint = enemyHit.point - new Vector2(enemyRopeLength, 0);
+                    if (isGrounded)
+                    {
+                        grapplePoint = enemyHit.point - new Vector2(enemyRopeLength, 0);
+                    }
+                    else
+                    {
+                        grapplePoint = enemyHit.point;
+                    }
                 }
             
                 rope.enabled = true;

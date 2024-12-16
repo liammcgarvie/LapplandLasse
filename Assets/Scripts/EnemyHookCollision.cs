@@ -53,7 +53,6 @@ public class EnemyHookCollision : MonoBehaviour
         if (pulling == false)
         {
             playerAnimator.SetBool("isPulling", false);
-            playerRb.bodyType = RigidbodyType2D.Dynamic;
         }
     }
     
@@ -72,7 +71,7 @@ public class EnemyHookCollision : MonoBehaviour
         playerAnimator.SetBool("isPulling", true);
             
         player.transform.position = playerPos;
-            
+        
         if (pullTarget.transform.position.x > player.transform.position.x)
         {
             pullTarget.position = rope.GetPosition(0);
@@ -89,8 +88,6 @@ public class EnemyHookCollision : MonoBehaviour
     private void ElevatedEnemyPull()
     {
         playerAnimator.SetBool("isPulling", true);
-        
-        playerRb.bodyType = RigidbodyType2D.Static;
         
         if (pullTarget.transform.position.x > player.transform.position.x)
         {
