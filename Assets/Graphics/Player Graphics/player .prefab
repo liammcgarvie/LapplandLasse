@@ -485,7 +485,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 10
   jumpForce: 500
-  bounceForce: 15
+  bounceForce: 20
   swingForce: 0.2
   acceleration: 5
   deceleration: 30
