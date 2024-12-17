@@ -845,6 +845,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 951988027846291624, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+      propertyPath: onJumped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 573829615}
     - target: {fileID: 3354985210680917638, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.42
@@ -894,6 +898,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+--- !u!114 &573829615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8145268263927556324, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+  m_PrefabInstance: {fileID: 653840147143629766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d78f8ce0c3db274096aa5cc46074872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730205374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,6 +2163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: walking enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5964310059191592238, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
+      propertyPath: onJumped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 573829615}
     - target: {fileID: 6955709451419428183, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.66

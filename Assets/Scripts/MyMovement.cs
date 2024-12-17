@@ -19,6 +19,8 @@ public class MyMovement : MonoBehaviour
     [SerializeField] private float maxSpeed = 10f;
     [Tooltip("This is the force that is put upon the player when you jump")]
     [SerializeField] private float jumpForce = 10f;
+    [Tooltip("This is the force that is put upon the player when you jump")]
+    [SerializeField] private float bounceForce = 10f;
     [Tooltip("This is the force that is put upon the player when you are moving while using the grappling hook")]
     [SerializeField] private float swingForce = 10f;
     [Tooltip("This is the speed of which the player accelerates when starting to move")]
@@ -206,6 +208,11 @@ public class MyMovement : MonoBehaviour
     public void EndGrapple() // Can be called with events
     {
         isGrappling = false;
+    }
+    
+    public void EnemyBounce() // Can be used with events
+    {
+        rb.AddForce(new Vector2(0f, bounceForce), ForceMode2D.Impulse);
     }
 
     // Sets all animator booleans to false

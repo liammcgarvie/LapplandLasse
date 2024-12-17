@@ -10,6 +10,12 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             onJumped.Invoke();
+            Death();
         }
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
     }
 }
