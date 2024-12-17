@@ -227,7 +227,7 @@ MonoBehaviour:
   hook: {fileID: 4523744372377705573}
   rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
-  enemyRopeSpeed: 3
+  enemyRopeSpeed: 5
   enemyRopeLength: 10
   maxDistance: 50
   grappleCooldownTime: 0
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 8168990343463181353}
   m_Layer: 0
   m_Name: hook
-  m_TagString: Untagged
+  m_TagString: Hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -803,8 +803,8 @@ Transform:
   m_GameObject: {fileID: 4523744372377705573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015, y: -0.048, z: 0}
-  m_LocalScale: {x: 2.4470663, y: 1.926694, z: 1}
+  m_LocalPosition: {x: 0.004, y: -0.048, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 690533839350396353}
@@ -850,7 +850,7 @@ SpriteRenderer:
   m_SortingLayerID: -1387784875
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2039954388, guid: 11f99d1ef17b94145bdafa0fc6e16d36, type: 3}
+  m_Sprite: {fileID: 1026501052, guid: 5a59f499d6b043a4484f6bfa1136e992, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -933,7 +933,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.125, y: 0.203125}
+    oldSize: {x: 0.609375, y: 0.5859375}
     newSize: {x: 0.125, y: 0.203125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

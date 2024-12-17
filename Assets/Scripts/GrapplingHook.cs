@@ -42,6 +42,7 @@ public class GrapplingHook : MonoBehaviour
     private bool isPressing;
     private bool shooting;
     private bool isGrounded;
+    private bool positionStop;
     private float elapsedTime;
     private float grappleCooldownTimer;
     
@@ -356,9 +357,13 @@ public class GrapplingHook : MonoBehaviour
         
         hook.SetActive(true);
 
+        Vector3 playerPos = transform.position;
+        
         while (shooting)
         {
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
+            
+            //transform.position = playerPos;
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
             rope.SetPosition(0, endPoint);
@@ -377,6 +382,8 @@ public class GrapplingHook : MonoBehaviour
         while (shooting == false)
         {
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
+            
+            //transform.position = playerPos;
             
             endPoint = Vector3.Lerp(startPoint, transform.position, elapsedTime);
             rope.SetPosition(0, endPoint);
