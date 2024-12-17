@@ -3,18 +3,7 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    public UnityEvent onJumped;
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            onJumped.Invoke();
-            Death();
-        }
-    }
-
-    private void Death()
+    public void Death() // Can be called with events
     {
         Destroy(gameObject);
     }

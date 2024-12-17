@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8145268263927556324}
   - component: {fileID: 4635141200256120795}
   - component: {fileID: 3048690935835443429}
+  - component: {fileID: 8208040125333713388}
   m_Layer: 7
   m_Name: 'player '
   m_TagString: Player
@@ -483,6 +484,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 10
   jumpForce: 500
+  bounceForce: 15
   swingForce: 0.2
   acceleration: 5
   deceleration: 30
@@ -563,6 +565,19 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 3.9733737
   m_MaxDistanceOnly: 0
+--- !u!114 &8208040125333713388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949567870988115298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f18d4a316715ac47a2c8f09d15becdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
 --- !u!1 &2172526284332712763
 GameObject:
   m_ObjectHideFlags: 0

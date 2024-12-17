@@ -845,17 +845,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 951988027846291624, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+    - target: {fileID: 2254546485627721864, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: onJumped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 573829615}
     - target: {fileID: 3354985210680917638, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.42
+      value: -4.483
       objectReference: {fileID: 0}
     - target: {fileID: 3354985210680917638, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.464
+      value: -3.884
       objectReference: {fileID: 0}
     - target: {fileID: 3354985210680917638, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2163,17 +2163,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: walking enemy 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5964310059191592238, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
+    - target: {fileID: 6095809595133982322, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: onJumped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 573829615}
     - target: {fileID: 6955709451419428183, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.66
+      value: -2.631
       objectReference: {fileID: 0}
     - target: {fileID: 6955709451419428183, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.29
+      value: -3.732
       objectReference: {fileID: 0}
     - target: {fileID: 6955709451419428183, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: m_LocalPosition.z
