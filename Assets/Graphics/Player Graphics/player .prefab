@@ -606,6 +606,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97390b766459704191d40ee8bd6e56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6013623638829508820}
+        m_TargetAssemblyTypeName: GrapplingHook, Assembly-CSharp
+        m_MethodName: CancelGrapple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2172526284332712763
 GameObject:
   m_ObjectHideFlags: 0

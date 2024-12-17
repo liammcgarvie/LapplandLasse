@@ -53,6 +53,7 @@ public class GrapplingHook : MonoBehaviour
     
     //TODO: Förbättra grappling hook cooldown
     //TODO: Fixa så att man inte behöver byta direction knapp när man snurrar runt saker
+    //TODO: Fixa så att grappling hooken avbryts när man respawnar
     void Start()
     {
         // Sets joint to the local DistanceJoint2D
@@ -459,5 +460,20 @@ public class GrapplingHook : MonoBehaviour
                 
         grappleSound.Play();
         canPlayGrappleSound = false;
+    }
+
+    public void CancelGrapple() // Can be used with events
+    {
+        isPressing = false;
+            
+        if (isGrappling)
+        {
+            canGrapple = false;
+            OffGrapple.Invoke();
+            joint.enabled = false;
+            isGrappling = false;
+            
+            StartCoroutine(OffGrappleAnimation());
+        }
     }
 }
