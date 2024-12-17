@@ -16,6 +16,8 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private Camera cam;
     [Tooltip("This is the hook object (can be a sprite for example)")]
     [SerializeField] private GameObject hook;
+    [Tooltip("This is the rigidbody of the player")] 
+    [SerializeField] private Rigidbody2D rb;
     [Tooltip("This is the speed of the grappling hook when you shoot it at a roof or a wall (the speed of the rope animation)")]
     [SerializeField] private float ropeSpeed = 0.1f;
     [Tooltip("This is the speed of the grappling hook when you shoot it at an enemy (the speed of the rope animation)")]
@@ -152,7 +154,7 @@ public class GrapplingHook : MonoBehaviour
                         StartCoroutine(GroundedEnemyGrappleAnimation());
                         break;
                     case false:
-                        StartCoroutine(ElevatedEnemyGrappleAnimation());
+                        StartCoroutine(GroundedEnemyGrappleAnimation()); //TODO: Ska egentligen vara elevated animation men funkar inte just nu
                         break;
                 }
             }
@@ -391,7 +393,7 @@ public class GrapplingHook : MonoBehaviour
         }
     }
 
-    private IEnumerator ElevatedEnemyGrappleAnimation()
+    private IEnumerator ElevatedEnemyGrappleAnimation() //TODO: Funkar inte
     {
         elapsedTime = 0;
         
@@ -405,6 +407,8 @@ public class GrapplingHook : MonoBehaviour
 
         while (shooting)
         {
+            transform.position = startPoint;
+            
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
@@ -425,7 +429,7 @@ public class GrapplingHook : MonoBehaviour
         {
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
             
-            endPoint = Vector3.Lerp(transform.position, startPoint, elapsedTime);
+            endPoint = Vector3.Lerp(transform.position, grapplePoint, elapsedTime);
             rope.SetPosition(1, endPoint);
             transform.position = endPoint;
             

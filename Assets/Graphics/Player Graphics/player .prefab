@@ -223,6 +223,7 @@ MonoBehaviour:
   rope: {fileID: 1044483492571396677}
   cam: {fileID: 9200108983172427031}
   hook: {fileID: 4523744372377705573}
+  rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
   enemyRopeSpeed: 3
   enemyRopeLength: 10

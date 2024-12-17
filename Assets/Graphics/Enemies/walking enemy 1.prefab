@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6955709451419428183}
   - component: {fileID: 3794723345774603243}
   - component: {fileID: 5241008210737778030}
+  - component: {fileID: 5964310059191592238}
   m_Layer: 0
   m_Name: walking enemy 1
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5964310059191592238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695032961402041114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e10375e1d4661c40906a6546236d5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

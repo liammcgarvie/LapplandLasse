@@ -89,6 +89,8 @@ public class EnemyHookCollision : MonoBehaviour
     {
         playerAnimator.SetBool("isPulling", true);
         
+        player.transform.position = playerPos;
+        
         if (pullTarget.transform.position.x > player.transform.position.x)
         {
             pullTarget.position = rope.GetPosition(0);
