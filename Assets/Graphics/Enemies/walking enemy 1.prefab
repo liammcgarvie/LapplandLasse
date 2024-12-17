@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.94, y: 0.43}
+  m_Size: {x: 1, y: 0.43}
   m_EdgeRadius: 0
 --- !u!50 &384326931550311001
 Rigidbody2D:
@@ -337,6 +337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de187e4131eea944bb0c7e9dfd4fb588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckCollider: {fileID: 0}
   onJumped:
     m_PersistentCalls:
       m_Calls:
