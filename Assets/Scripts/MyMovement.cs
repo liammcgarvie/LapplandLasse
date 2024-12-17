@@ -212,7 +212,10 @@ public class MyMovement : MonoBehaviour
     
     public void EnemyBounce() // Can be used with events
     {
-        rb.AddForce(new Vector2(0f, bounceForce), ForceMode2D.Impulse);
+        if (isGrounded == false)
+        {
+            rb.AddForce(new Vector2(0f, bounceForce), ForceMode2D.Impulse);
+        }
     }
 
     // Sets all animator booleans to false

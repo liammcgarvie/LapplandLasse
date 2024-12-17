@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 4635141200256120795}
   - component: {fileID: 3048690935835443429}
   - component: {fileID: 8208040125333713388}
+  - component: {fileID: 1546563624720586966}
   m_Layer: 7
   m_Name: 'player '
   m_TagString: Player
@@ -578,6 +579,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  respawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1546563624720586966}
+        m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1546563624720586966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949567870988115298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97390b766459704191d40ee8bd6e56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2172526284332712763
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +881,7 @@ MonoBehaviour:
   playerRb: {fileID: 4635141200256120795}
   rope: {fileID: 1044483492571396677}
   playerAnimator: {fileID: 2641195189766255520}
-  offsetX: 1
+  offsetX: 0
   OnHit:
     m_PersistentCalls:
       m_Calls:

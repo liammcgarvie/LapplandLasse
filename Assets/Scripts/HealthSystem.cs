@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 3;
     
     private int currentHealth;
+    
+    public UnityEvent respawn;
 
     private void Start()
     {
@@ -17,6 +20,22 @@ public class HealthSystem : MonoBehaviour
         {
             Death();
         }
+        
+        Debug.Log("Health: " + currentHealth);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            HitEnemy();
+        }
+    }
+
+    private void HitEnemy() // When you hit an enemy and take damage
+    {
+        LoseHealth(1);
+        respawn.Invoke();
     }
 
     private void Death() // Is called when you lose all your health
