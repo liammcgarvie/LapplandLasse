@@ -121,29 +121,7 @@ public class GrapplingHook : MonoBehaviour
             {
                 hook.SetActive(true);
 
-                if (enemyHit.point.x > transform.position.x)
-                {
-                    if (isGrounded)
-                    {
-                        grapplePoint = enemyHit.point + new Vector2(enemyRopeLength, 0);
-                    }
-                    else
-                    {
-                        grapplePoint = enemyHit.point;
-                    }
-                }
-                
-                if (enemyHit.point.x < transform.position.x)
-                {
-                    if (isGrounded)
-                    {
-                        grapplePoint = enemyHit.point - new Vector2(enemyRopeLength, 0);
-                    }
-                    else
-                    {
-                        grapplePoint = enemyHit.point;
-                    }
-                }
+                grapplePoint = enemyHit.point + new Vector2(direction.x, direction.y);
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
