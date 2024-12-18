@@ -22,8 +22,6 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float ropeSpeed = 0.1f;
     [Tooltip("This is the speed of the grappling hook when you shoot it at an enemy (the speed of the rope animation)")]
     [SerializeField] private float enemyRopeSpeed = 0.1f;
-    [Tooltip("This is the extra length of the rope when grappling towards an enemy")]
-    [SerializeField] private float enemyRopeLength = 10f;
     [Tooltip("This is the max distance in which you can grapple")]
     [SerializeField] private float maxDistance = 100.0f;
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
