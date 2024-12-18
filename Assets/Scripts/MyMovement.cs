@@ -34,16 +34,13 @@ public class MyMovement : MonoBehaviour
     private bool isMoving;
     private bool isGrappling;
     private bool justGrappled;
-
-    private float speed;
+    private bool accelerate;
 
     private Rigidbody2D rb;
     private CircleCollider2D groundCheckCollider;
     
     public UnityEvent OnGrounded;
     public UnityEvent OffGrounded;
-
-    //TODO: Fixa acceleration glitch
     
     private void Awake()
     {
@@ -53,30 +50,18 @@ public class MyMovement : MonoBehaviour
         groundCheckCollider.isTrigger = true;
         
         startPosition = transform.position;
-        
-        speed = 0;
     }
 
     private void FixedUpdate()
     {
-        if (isMoving == false)
-        {
-            speed = 0;
-        }
-        
         // Using velocity based movement while not using the grappling hook
         if (isMoving && isGrappling == false && justGrappled == false)
         {
-            speed += acceleration * Time.deltaTime;
+            float targetSpeed = moveInput.x * maxSpeed;
             
-            Vector2 currentVelocity = rb.velocity;
-            
-            //rb.velocity = new Vector2(TranslateInputToVelocityX(moveInput) * speed, currentVelocity.y);
-            rb.AddForce(new Vector2(TranslateInputToVelocityX(moveInput) * speed, 0), ForceMode2D.Impulse);
-
-            if (Mathf.Abs(currentVelocity.x) >= maxSpeed)
+            if (rb.velocity.x == 0 || accelerate)
             {
-                rb.velocity = new Vector2(currentVelocity.x, rb.velocity.y);
+                rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, targetSpeed, acceleration * Time.deltaTime), rb.velocity.y);
             }
         }
 
@@ -89,26 +74,39 @@ public class MyMovement : MonoBehaviour
         // Stops the player if it is not supposed to move
         if (isMoving == false && isGrappling == false && justGrappled == false)
         {
-            if (rb.velocity.x > 0.5f)
-            {
-                rb.velocity -= new Vector2(deceleration * Time.deltaTime, 0f);
-            }
-            else if (rb.velocity.x < -0.5f)
-            {
-                rb.velocity += new Vector2(deceleration * Time.deltaTime, 0f);
-            }
-            else
-            {
-                rb.velocity = new Vector2(0f, rb.velocity.y);
-            }
+            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, deceleration * Time.deltaTime), rb.velocity.y);
         }
     }
 
     private void Update()
     {
+        if (moveInput.x > 0)
+        {
+            if (rb.velocity.x > 0)
+            {
+                accelerate = true;
+            }
+            else
+            {
+                accelerate = false;
+            }
+        }
+
+        if (moveInput.x < 0)
+        {
+            if (rb.velocity.x < 0)
+            {
+                accelerate = true;
+            }
+            else
+            {
+                accelerate = false;
+            }
+        }
+        
         isGrounded = IsGrounded();
         
-        // This is used to switch the isGrounded variable in other scripts aswell
+        // This is used to switch the isGrounded variable in other scripts as well
         switch (isGrounded)
         {
             case true:
@@ -137,14 +135,9 @@ public class MyMovement : MonoBehaviour
         //Bugfix
         if (isMoving && isGrappling == false && justGrappled == false)
         {
-            if (rb.velocity.x > 0 && moveInput.x < 0)
+            if ((rb.velocity.x > 0 && moveInput.x < 0) || (rb.velocity.x < 0 && moveInput.x > 0))
             {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
-        
-            if (rb.velocity.x < 0 && moveInput.x > 0)
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
+                rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, deceleration * Time.deltaTime), rb.velocity.y);
             }
         }
     }

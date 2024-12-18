@@ -487,7 +487,7 @@ MonoBehaviour:
   jumpForce: 500
   bounceForce: 20
   swingForce: 0.2
-  acceleration: 5
+  acceleration: 20
   deceleration: 30
   OnGrounded:
     m_PersistentCalls:
