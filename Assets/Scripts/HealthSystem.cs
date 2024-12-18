@@ -24,9 +24,9 @@ public class HealthSystem : MonoBehaviour
         Debug.Log("Health: " + currentHealth);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             HitEnemy();
         }
