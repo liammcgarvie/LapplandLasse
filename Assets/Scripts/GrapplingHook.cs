@@ -145,7 +145,7 @@ public class GrapplingHook : MonoBehaviour
             {
                 hook.SetActive(true);
 
-                grapplePoint = enemyHit.point + new Vector2(direction.x, direction.y);
+                grapplePoint = enemyHit.point + new Vector2(direction.x * 10, direction.y * 10);
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
