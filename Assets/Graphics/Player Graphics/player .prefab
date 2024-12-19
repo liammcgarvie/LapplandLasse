@@ -19,9 +19,11 @@ GameObject:
   - component: {fileID: 8145268263927556324}
   - component: {fileID: 4635141200256120795}
   - component: {fileID: 3048690935835443429}
-  m_Layer: 0
+  - component: {fileID: 8208040125333713388}
+  - component: {fileID: 1546563624720586966}
+  m_Layer: 7
   m_Name: 'player '
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +39,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 36.503, y: -6.488, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4443083887515731111}
   - {fileID: 8886540791261797588}
@@ -162,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.95}
+  m_Size: {x: 0.6, y: 0.86}
   m_EdgeRadius: 0
 --- !u!58 &7408087453142990835
 CircleCollider2D:
@@ -223,10 +225,10 @@ MonoBehaviour:
   rope: {fileID: 1044483492571396677}
   cam: {fileID: 9200108983172427031}
   hook: {fileID: 4523744372377705573}
+  rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
-  enemyRopeSpeed: 3
-  enemyRopeLength: 10
-  maxDistance: 50
+  enemyRopeSpeed: 1.5
+  maxDistance: 10
   grappleCooldownTime: 0
   grappleSound: {fileID: 8849983659826987826}
   OnGrapple:
@@ -480,10 +482,11 @@ MonoBehaviour:
   armSprite: {fileID: 8809238936077230155}
   grappleArmSprite: {fileID: 2531558385380118913}
   playerAnimator: {fileID: 2641195189766255520}
-  maxSpeed: 10
-  jumpForce: 500
+  maxSpeed: 8.5
+  jumpForce: 700
+  bounceForce: 25
   swingForce: 0.2
-  acceleration: 5
+  acceleration: 15
   deceleration: 30
   OnGrounded:
     m_PersistentCalls:
@@ -530,7 +533,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -562,6 +565,61 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 3.9733737
   m_MaxDistanceOnly: 0
+--- !u!114 &8208040125333713388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949567870988115298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f18d4a316715ac47a2c8f09d15becdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  respawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1546563624720586966}
+        m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1546563624720586966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949567870988115298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97390b766459704191d40ee8bd6e56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6013623638829508820}
+        m_TargetAssemblyTypeName: GrapplingHook, Assembly-CSharp
+        m_MethodName: CancelGrapple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2172526284332712763
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +803,7 @@ GameObject:
   - component: {fileID: 8168990343463181353}
   m_Layer: 0
   m_Name: hook
-  m_TagString: Untagged
+  m_TagString: Hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -759,8 +817,8 @@ Transform:
   m_GameObject: {fileID: 4523744372377705573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015, y: -0.048, z: 0}
-  m_LocalScale: {x: 2.4470663, y: 1.926694, z: 1}
+  m_LocalPosition: {x: 0.004, y: -0.048, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 690533839350396353}
@@ -806,7 +864,7 @@ SpriteRenderer:
   m_SortingLayerID: -1387784875
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2039954388, guid: 11f99d1ef17b94145bdafa0fc6e16d36, type: 3}
+  m_Sprite: {fileID: 1026501052, guid: 5a59f499d6b043a4484f6bfa1136e992, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -837,7 +895,7 @@ MonoBehaviour:
   playerRb: {fileID: 4635141200256120795}
   rope: {fileID: 1044483492571396677}
   playerAnimator: {fileID: 2641195189766255520}
-  offsetX: 1
+  offsetX: 0
   OnHit:
     m_PersistentCalls:
       m_Calls:
@@ -889,7 +947,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.125, y: 0.203125}
+    oldSize: {x: 0.609375, y: 0.5859375}
     newSize: {x: 0.125, y: 0.203125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1088,10 +1146,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8317598167692034331}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 690533839350396353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1126,9 +1184,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
   orthographic size: 14.151496
   m_Depth: -1
@@ -1166,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 128
+  m_AssetsPPU: 84
   m_RefResolutionX: 1920
   m_RefResolutionY: 1080
   m_UpscaleRT: 0

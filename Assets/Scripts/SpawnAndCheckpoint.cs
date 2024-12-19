@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnAndCheckpoint : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector3 respawnPoint;
+    
+    public UnityEvent onRespawn;
 
     private void Start()
     {
@@ -20,5 +23,6 @@ public class SpawnAndCheckpoint : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         transform.position = respawnPoint;
+        onRespawn.Invoke();
     }
 }

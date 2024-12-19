@@ -16,12 +16,12 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private Camera cam;
     [Tooltip("This is the hook object (can be a sprite for example)")]
     [SerializeField] private GameObject hook;
+    [Tooltip("This is the rigidbody of the player")] 
+    [SerializeField] private Rigidbody2D rb;
     [Tooltip("This is the speed of the grappling hook when you shoot it at a roof or a wall (the speed of the rope animation)")]
     [SerializeField] private float ropeSpeed = 0.1f;
     [Tooltip("This is the speed of the grappling hook when you shoot it at an enemy (the speed of the rope animation)")]
     [SerializeField] private float enemyRopeSpeed = 0.1f;
-    [Tooltip("This is the extra length of the rope when grappling towards an enemy")]
-    [SerializeField] private float enemyRopeLength = 10f;
     [Tooltip("This is the max distance in which you can grapple")]
     [SerializeField] private float maxDistance = 100.0f;
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
@@ -40,6 +40,7 @@ public class GrapplingHook : MonoBehaviour
     private bool isPressing;
     private bool shooting;
     private bool isGrounded;
+    private bool positionStop;
     private float elapsedTime;
     private float grappleCooldownTimer;
     
@@ -114,33 +115,11 @@ public class GrapplingHook : MonoBehaviour
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
             // Starts grappling if the raycast hits an enemy
-            if (enemyHit.collider && canGrapple)
+            if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance)
             {
                 hook.SetActive(true);
 
-                if (enemyHit.point.x > transform.position.x)
-                {
-                    if (isGrounded)
-                    {
-                        grapplePoint = enemyHit.point + new Vector2(enemyRopeLength, 0);
-                    }
-                    else
-                    {
-                        grapplePoint = enemyHit.point;
-                    }
-                }
-                
-                if (enemyHit.point.x < transform.position.x)
-                {
-                    if (isGrounded)
-                    {
-                        grapplePoint = enemyHit.point - new Vector2(enemyRopeLength, 0);
-                    }
-                    else
-                    {
-                        grapplePoint = enemyHit.point;
-                    }
-                }
+                grapplePoint = enemyHit.point + new Vector2(direction.x, direction.y);
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
@@ -152,7 +131,7 @@ public class GrapplingHook : MonoBehaviour
                         StartCoroutine(GroundedEnemyGrappleAnimation());
                         break;
                     case false:
-                        StartCoroutine(ElevatedEnemyGrappleAnimation());
+                        StartCoroutine(GroundedEnemyGrappleAnimation()); //TODO: Ska egentligen vara elevated animation men funkar inte just nu
                         break;
                 }
             }
@@ -353,7 +332,7 @@ public class GrapplingHook : MonoBehaviour
         shooting = true;
         
         hook.SetActive(true);
-
+        
         while (shooting)
         {
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
@@ -391,7 +370,7 @@ public class GrapplingHook : MonoBehaviour
         }
     }
 
-    private IEnumerator ElevatedEnemyGrappleAnimation()
+    private IEnumerator ElevatedEnemyGrappleAnimation() //TODO: Funkar inte
     {
         elapsedTime = 0;
         
@@ -405,6 +384,8 @@ public class GrapplingHook : MonoBehaviour
 
         while (shooting)
         {
+            transform.position = startPoint;
+            
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
@@ -425,7 +406,7 @@ public class GrapplingHook : MonoBehaviour
         {
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
             
-            endPoint = Vector3.Lerp(transform.position, startPoint, elapsedTime);
+            endPoint = Vector3.Lerp(transform.position, grapplePoint, elapsedTime);
             rope.SetPosition(1, endPoint);
             transform.position = endPoint;
             
@@ -448,5 +429,20 @@ public class GrapplingHook : MonoBehaviour
                 
         grappleSound.Play();
         canPlayGrappleSound = false;
+    }
+
+    public void CancelGrapple() // Can be used with events
+    {
+        isPressing = false;
+            
+        if (isGrappling)
+        {
+            canGrapple = false;
+            OffGrapple.Invoke();
+            joint.enabled = false;
+            isGrappling = false;
+            
+            StartCoroutine(OffGrappleAnimation());
+        }
     }
 }

@@ -29,6 +29,11 @@ public class EnemyHookCollision : MonoBehaviour
     private void Update()
     {
         isGrounded = IsGrounded();
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            pulling = false;
+        }
         
         if (pulling && isGrounded)
         {
@@ -88,6 +93,8 @@ public class EnemyHookCollision : MonoBehaviour
     private void ElevatedEnemyPull()
     {
         playerAnimator.SetBool("isPulling", true);
+        
+        player.transform.position = playerPos;
         
         if (pullTarget.transform.position.x > player.transform.position.x)
         {
