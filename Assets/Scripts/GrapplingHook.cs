@@ -114,6 +114,11 @@ public class GrapplingHook : MonoBehaviour
             // Debugs the ray to visualize it in the Scene view
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
+            if (grappleHit.collider && enemyHit.collider)
+            {
+                
+            }
+            
             // Starts grappling if the raycast hits an enemy
             if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance)
             {
