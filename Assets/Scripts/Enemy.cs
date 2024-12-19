@@ -26,6 +26,6 @@ public class Enemy : MonoBehaviour
     public void Death() // Can be called with events
     {
         deathSound.Play();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
