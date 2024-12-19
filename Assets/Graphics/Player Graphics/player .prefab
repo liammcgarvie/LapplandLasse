@@ -228,7 +228,6 @@ MonoBehaviour:
   rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
   enemyRopeSpeed: 5
-  enemyRopeLength: 10
   maxDistance: 50
   grappleCooldownTime: 0
   grappleSound: {fileID: 8849983659826987826}
@@ -1147,7 +1146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8317598167692034331}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1185,11 +1184,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 14.151496
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
