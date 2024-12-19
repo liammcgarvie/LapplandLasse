@@ -116,7 +116,7 @@ public class GrapplingHook : MonoBehaviour
 
             if (grappleHit.collider && enemyHit.collider)
             {
-                
+                //Fixa bugg
             }
             
             // Starts grappling if the raycast hits an enemy
