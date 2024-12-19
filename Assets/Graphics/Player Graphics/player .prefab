@@ -485,7 +485,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 8.5
   jumpForce: 700
-  bounceForce: 25
+  bounceForce: 15
   swingForce: 0.2
   acceleration: 15
   deceleration: 30
@@ -564,7 +564,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.9733737
+  m_Distance: 449.59628
   m_MaxDistanceOnly: 0
 --- !u!114 &8208040125333713388
 MonoBehaviour:
