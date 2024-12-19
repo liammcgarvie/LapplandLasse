@@ -39,7 +39,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 36.503, y: -6.488, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4443083887515731111}
   - {fileID: 8886540791261797588}
@@ -164,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.95}
+  m_Size: {x: 0.6, y: 0.86}
   m_EdgeRadius: 0
 --- !u!58 &7408087453142990835
 CircleCollider2D:
@@ -482,11 +482,11 @@ MonoBehaviour:
   armSprite: {fileID: 8809238936077230155}
   grappleArmSprite: {fileID: 2531558385380118913}
   playerAnimator: {fileID: 2641195189766255520}
-  maxSpeed: 10
-  jumpForce: 500
-  bounceForce: 20
+  maxSpeed: 8.5
+  jumpForce: 700
+  bounceForce: 25
   swingForce: 0.2
-  acceleration: 20
+  acceleration: 15
   deceleration: 30
   OnGrounded:
     m_PersistentCalls:
@@ -533,7 +533,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -563,7 +563,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.9733737
+  m_Distance: 449.59628
   m_MaxDistanceOnly: 0
 --- !u!114 &8208040125333713388
 MonoBehaviour:
@@ -1147,9 +1147,9 @@ Transform:
   m_GameObject: {fileID: 8317598167692034331}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 690533839350396353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1188,7 +1188,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 14.151496
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 128
+  m_AssetsPPU: 64
   m_RefResolutionX: 1920
   m_RefResolutionY: 1080
   m_UpscaleRT: 0
