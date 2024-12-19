@@ -361,6 +361,11 @@ public class GrapplingHook : MonoBehaviour
         
         while (shooting)
         {
+            if (Input.GetMouseButtonUp(0))
+            {
+                rope.SetPosition(0, transform.position);
+                yield break;
+            }
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
