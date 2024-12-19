@@ -8,19 +8,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/AliceScene.unity
+    guid: 0734d7af68ead004780194d8659348a8
   - enabled: 1
     path: Assets/Scenes/Titelscene.unity
     guid: cb0fe125982842741ab20403128428ad
   - enabled: 1
-    path: Assets/Scenes/AliceScene.unity
-    guid: 0734d7af68ead004780194d8659348a8
+    path: Assets/Scenes/Intro comic.unity
+    guid: c25f980f59f31fe43bd98500b19ae858
   - enabled: 1
+    path: Assets/Scenes/LiamScene3.unity
+    guid: cd76af03505d71445a49a143d0ec0b11
+  - enabled: 1
+    path: Assets/Scenes/You win!!!.unity
+    guid: c6681bb7a9556074282ce70c37fdd29d
+  - enabled: 0
     path: Assets/Scenes/LiamScene2.unity
     guid: 21fbc13bb5d7906428496ba7c02893b8
   - enabled: 0
     path: Assets/Scenes/Naom  gseme.unity
     guid: 65589dfaf5ee0a143a6857dbb55a67ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Naom  gseme graphics.unity
     guid: c21fed947a7a47d468af1b1e6c0cf06b
   m_configObjects: {}
