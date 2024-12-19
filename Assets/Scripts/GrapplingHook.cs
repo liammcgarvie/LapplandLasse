@@ -118,6 +118,7 @@ public class GrapplingHook : MonoBehaviour
             // Debugs the ray to visualize it in the Scene view
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
+            // This makes sure that if the raycasts are hitting enemies and ground the grapple will go for what's closest
             if (grappleHit.collider && enemyHit.collider && enemyHit.distance <= grappleHit.distance)
             {
                 hitEnemy = true;
