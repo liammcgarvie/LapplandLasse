@@ -29,6 +29,11 @@ public class EnemyHookCollision : MonoBehaviour
     private void Update()
     {
         isGrounded = IsGrounded();
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            pulling = false;
+        }
         
         if (pulling && isGrounded)
         {

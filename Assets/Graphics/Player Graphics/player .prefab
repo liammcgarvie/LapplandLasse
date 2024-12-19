@@ -227,7 +227,7 @@ MonoBehaviour:
   hook: {fileID: 4523744372377705573}
   rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
-  enemyRopeSpeed: 5
+  enemyRopeSpeed: 3
   maxDistance: 50
   grappleCooldownTime: 0
   grappleSound: {fileID: 8849983659826987826}
@@ -563,7 +563,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 449.59628
+  m_Distance: 3.9733737
   m_MaxDistanceOnly: 0
 --- !u!114 &8208040125333713388
 MonoBehaviour:
