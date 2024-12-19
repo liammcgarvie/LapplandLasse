@@ -27,7 +27,7 @@ public class GrapplingHook : MonoBehaviour
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
     [SerializeField] private float grappleCooldownTime = 0.5f;
     
-    [SerializeField] private AudioSource grappleSound;
+    [SerializeField] private AudioSource grappleHitSound;
     
     private Vector3 grapplePoint;
     private Vector3 endPoint;
@@ -36,7 +36,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector2 direction;
     private bool isGrappling;
     private bool canGrapple;
-    private bool canPlayGrappleSound;
+    private bool canPlayGrappleHitSound;
     private bool isPressing;
     private bool shooting;
     private bool isGrounded;
@@ -234,7 +234,7 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
-        canPlayGrappleSound = true;
+        canPlayGrappleHitSound = true;
         
         while (isPressing)
         {
@@ -244,10 +244,10 @@ public class GrapplingHook : MonoBehaviour
             rope.SetPosition(0, endPoint);
             hook.transform.position = endPoint;
             
-            if (hook.transform.position == grapplePoint && canPlayGrappleSound)
+            if (hook.transform.position == grapplePoint && canPlayGrappleHitSound)
             {
-                grappleSound.Play();
-                canPlayGrappleSound = false;
+                grappleHitSound.Play();
+                canPlayGrappleHitSound = false;
                 yield break;
             }
 
@@ -333,7 +333,7 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
-        canPlayGrappleSound = true;
+        canPlayGrappleHitSound = true;
         
         shooting = true;
         
@@ -382,7 +382,7 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
-        canPlayGrappleSound = true;
+        canPlayGrappleHitSound = true;
         
         shooting = true;
         
@@ -433,8 +433,8 @@ public class GrapplingHook : MonoBehaviour
         startPoint = endPoint;
         elapsedTime = 0;
                 
-        grappleSound.Play();
-        canPlayGrappleSound = false;
+        grappleHitSound.Play();
+        canPlayGrappleHitSound = false;
     }
 
     public void CancelGrapple() // Can be used with events
