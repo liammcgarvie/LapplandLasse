@@ -51,6 +51,7 @@ public class GrapplingHook : MonoBehaviour
     
     //TODO: Förbättra grappling hook cooldown
     //TODO: Fixa så att man inte behöver byta direction knapp när man snurrar runt saker
+    //TODO: Fixa så att grappling hooken fastnar på närmaste target och inte alltid fienden först
     void Start()
     {
         // Sets joint to the local DistanceJoint2D
