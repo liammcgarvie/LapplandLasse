@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -41,6 +42,8 @@ public class GrapplingHook : MonoBehaviour
     private bool shooting;
     private bool isGrounded;
     private bool positionStop;
+    private bool hitEnemy;
+    private bool hitGround;
     private float elapsedTime;
     private float grappleCooldownTimer;
     
@@ -115,13 +118,29 @@ public class GrapplingHook : MonoBehaviour
             // Debugs the ray to visualize it in the Scene view
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
-            if (grappleHit.collider && enemyHit.collider)
+            if (grappleHit.collider && enemyHit.collider && enemyHit.distance <= grappleHit.distance)
             {
-                //Fixa bugg
+                hitEnemy = true;
+                hitGround = false;
+            } 
+            else if (grappleHit.collider && enemyHit.collider && grappleHit.distance < enemyHit.distance)
+            {
+                hitGround = false;
+                hitGround = true;
+            }
+            else if (grappleHit.collider && enemyHit.collider == false)
+            {
+                hitGround = true;
+                hitEnemy = false;
+            }
+            else if (enemyHit.collider && grappleHit.collider == false)
+            {
+                hitGround = false;
+                hitEnemy = true;
             }
             
             // Starts grappling if the raycast hits an enemy
-            if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance)
+            if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance && hitEnemy)
             {
                 hook.SetActive(true);
 
@@ -143,7 +162,7 @@ public class GrapplingHook : MonoBehaviour
             }
             
             // Starts grappling if the raycast hits a viable layer and if the direction is not downwards
-            if (grappleHit.collider && enemyHit.collider == false && direction.y >= 0 && canGrapple)
+            if (grappleHit.collider&& direction.y >= 0 && canGrapple && hitGround)
             {
                 OnGrapple.Invoke();
                 grapplePoint = grappleHit.point;
