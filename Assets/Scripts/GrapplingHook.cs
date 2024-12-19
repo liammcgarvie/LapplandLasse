@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -27,7 +28,7 @@ public class GrapplingHook : MonoBehaviour
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
     [SerializeField] private float grappleCooldownTime = 0.5f;
     
-    [SerializeField] private AudioSource grappleSound;
+    [SerializeField] private AudioSource grappleHitSound;
     
     private Vector3 grapplePoint;
     private Vector3 endPoint;
@@ -36,11 +37,13 @@ public class GrapplingHook : MonoBehaviour
     private Vector2 direction;
     private bool isGrappling;
     private bool canGrapple;
-    private bool canPlayGrappleSound;
+    private bool canPlayGrappleHitSound;
     private bool isPressing;
     private bool shooting;
     private bool isGrounded;
     private bool positionStop;
+    private bool hitEnemy;
+    private bool hitGround;
     private float elapsedTime;
     private float grappleCooldownTimer;
     
@@ -51,6 +54,7 @@ public class GrapplingHook : MonoBehaviour
     
     //TODO: Förbättra grappling hook cooldown
     //TODO: Fixa så att man inte behöver byta direction knapp när man snurrar runt saker
+    //TODO: Fixa så att grappling hooken fastnar på närmaste target och inte alltid fienden först
     void Start()
     {
         // Sets joint to the local DistanceJoint2D
@@ -114,17 +118,34 @@ public class GrapplingHook : MonoBehaviour
             // Debugs the ray to visualize it in the Scene view
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
-            if (grappleHit.collider && enemyHit.collider)
+            // This makes sure that if the raycasts are hitting enemies and ground the grapple will go for what's closest
+            if (grappleHit.collider && enemyHit.collider && enemyHit.distance <= grappleHit.distance)
             {
-                //Fixa bugg
+                hitEnemy = true;
+                hitGround = false;
+            } 
+            else if (grappleHit.collider && enemyHit.collider && grappleHit.distance < enemyHit.distance)
+            {
+                hitGround = false;
+                hitGround = true;
+            }
+            else if (grappleHit.collider && enemyHit.collider == false)
+            {
+                hitGround = true;
+                hitEnemy = false;
+            }
+            else if (enemyHit.collider && grappleHit.collider == false)
+            {
+                hitGround = false;
+                hitEnemy = true;
             }
             
             // Starts grappling if the raycast hits an enemy
-            if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance)
+            if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance && hitEnemy)
             {
                 hook.SetActive(true);
 
-                grapplePoint = enemyHit.point + new Vector2(direction.x, direction.y);
+                grapplePoint = enemyHit.point + new Vector2(direction.x * 10, direction.y * 10);
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
@@ -142,7 +163,7 @@ public class GrapplingHook : MonoBehaviour
             }
             
             // Starts grappling if the raycast hits a viable layer and if the direction is not downwards
-            if (grappleHit.collider && enemyHit.collider == false && direction.y >= 0 && canGrapple)
+            if (grappleHit.collider&& direction.y >= 0 && canGrapple && hitGround)
             {
                 OnGrapple.Invoke();
                 grapplePoint = grappleHit.point;
@@ -233,7 +254,7 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
-        canPlayGrappleSound = true;
+        canPlayGrappleHitSound = true;
         
         while (isPressing)
         {
@@ -243,10 +264,10 @@ public class GrapplingHook : MonoBehaviour
             rope.SetPosition(0, endPoint);
             hook.transform.position = endPoint;
             
-            if (hook.transform.position == grapplePoint && canPlayGrappleSound)
+            if (hook.transform.position == grapplePoint && canPlayGrappleHitSound)
             {
-                grappleSound.Play();
-                canPlayGrappleSound = false;
+                grappleHitSound.Play();
+                canPlayGrappleHitSound = false;
                 yield break;
             }
 
@@ -332,7 +353,7 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
-        canPlayGrappleSound = true;
+        canPlayGrappleHitSound = true;
         
         shooting = true;
         
@@ -340,6 +361,11 @@ public class GrapplingHook : MonoBehaviour
         
         while (shooting)
         {
+            if (Input.GetMouseButtonUp(0))
+            {
+                rope.SetPosition(0, transform.position);
+                yield break;
+            }
             elapsedTime += Time.deltaTime * enemyRopeSpeed;
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
@@ -381,7 +407,7 @@ public class GrapplingHook : MonoBehaviour
         
         startPoint = transform.position;
         
-        canPlayGrappleSound = true;
+        canPlayGrappleHitSound = true;
         
         shooting = true;
         
@@ -432,8 +458,8 @@ public class GrapplingHook : MonoBehaviour
         startPoint = endPoint;
         elapsedTime = 0;
                 
-        grappleSound.Play();
-        canPlayGrappleSound = false;
+        grappleHitSound.Play();
+        canPlayGrappleHitSound = false;
     }
 
     public void CancelGrapple() // Can be used with events

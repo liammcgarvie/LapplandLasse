@@ -231,7 +231,7 @@ MonoBehaviour:
   enemyRopeSpeed: 1.5
   maxDistance: 10
   grappleCooldownTime: 0
-  grappleSound: {fileID: 8849983659826987826}
+  grappleHitSound: {fileID: 8849983659826987826}
   OnGrapple:
     m_PersistentCalls:
       m_Calls:
@@ -564,7 +564,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 449.59628
+  m_Distance: 3.9733737
   m_MaxDistanceOnly: 0
 --- !u!114 &8208040125333713388
 MonoBehaviour:
