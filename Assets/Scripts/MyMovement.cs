@@ -254,7 +254,7 @@ public class MyMovement : MonoBehaviour
         }
         
         // Sets animation to running
-        if (Mathf.Abs(rb.velocity.x) >= maxSpeed && isGrounded)
+        if (Mathf.Abs(rb.velocity.x) >= maxSpeed - 1 && isGrounded)
         {
             AnimationBooleansFalse();
             
