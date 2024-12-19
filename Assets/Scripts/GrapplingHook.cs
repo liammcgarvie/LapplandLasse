@@ -115,7 +115,7 @@ public class GrapplingHook : MonoBehaviour
             Debug.DrawRay(transform.position, direction * 10, Color.red, 2f);
 
             // Starts grappling if the raycast hits an enemy
-            if (enemyHit.collider && canGrapple)
+            if (enemyHit.collider && canGrapple && enemyHit.distance <= maxDistance)
             {
                 hook.SetActive(true);
 
