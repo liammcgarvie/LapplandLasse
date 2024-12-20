@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7399620506150825255}
   - component: {fileID: 8475077798773743199}
   - component: {fileID: 305044794054856938}
+  - component: {fileID: 4650639583611184770}
   - component: {fileID: 7683895903965525610}
   m_Layer: 0
   m_Name: Gem
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 551446843, guid: 5a59f499d6b043a4484f6bfa1136e992, type: 3}
+  m_Sprite: {fileID: -1161684898, guid: 5a59f499d6b043a4484f6bfa1136e992, type: 3}
   m_Color: {r: 1, g: 0.9371726, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,14 +139,26 @@ MonoBehaviour:
   triggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7683895903965525610}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: NextScene
-        m_Mode: 1
+      - m_Target: {fileID: 7376601936280340789}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4650639583611184770}
+        m_TargetAssemblyTypeName: UICounter, Assembly-CSharp
+        m_MethodName: AddToCounter
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -250,6 +263,22 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   onTriggerEnterWithPosition:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4650639583611184770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376601936280340789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b49337746204b4ca2c42910580df56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterText: {fileID: 0}
+  onComparedAndTrue:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &7683895903965525610
