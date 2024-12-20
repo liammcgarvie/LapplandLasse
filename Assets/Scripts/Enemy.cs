@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -6,8 +7,13 @@ public class Enemy : MonoBehaviour
     
     [SerializeField] private AudioSource deathSound;
     
-    //TODO: Ljudet funkar inte
-    
+    private Vector3 startPos;
+
+    private void Start()
+    {
+        startPos = transform.position;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Hook"))
@@ -27,5 +33,10 @@ public class Enemy : MonoBehaviour
     {
         deathSound.Play();
         gameObject.SetActive(false);
+    }
+
+    public void Respawn() // Can be used with events
+    {
+        transform.position = startPos;
     }
 }
