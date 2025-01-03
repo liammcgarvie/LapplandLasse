@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Titelscene.unity
     guid: cb0fe125982842741ab20403128428ad
   - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 5fe748f1a62b2c54f9f5ef1d9fb7943d
+  - enabled: 1
     path: Assets/Scenes/Intro comic.unity
     guid: c25f980f59f31fe43bd98500b19ae858
   - enabled: 1

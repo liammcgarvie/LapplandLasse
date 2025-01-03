@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7399620506150825255}
   - component: {fileID: 8475077798773743199}
   - component: {fileID: 305044794054856938}
+  - component: {fileID: 4650639583611184770}
   - component: {fileID: 7683895903965525610}
   m_Layer: 0
   m_Name: Gem
@@ -121,7 +122,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.33
 --- !u!114 &305044794054856938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4650639583611184770}
         m_TargetAssemblyTypeName: UICounter, Assembly-CSharp
         m_MethodName: AddToCounter
         m_Mode: 3
@@ -160,7 +161,7 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   triggerExit:
     m_PersistentCalls:
@@ -262,6 +263,22 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   onTriggerEnterWithPosition:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4650639583611184770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376601936280340789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b49337746204b4ca2c42910580df56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterText: {fileID: 0}
+  onComparedAndTrue:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &7683895903965525610
