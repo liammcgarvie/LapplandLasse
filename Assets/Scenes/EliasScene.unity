@@ -2352,7 +2352,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1187517711}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f2f9d0cf438124148b1997ccfa8f60ec, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3360,7 +3360,8 @@ PrefabInstance:
       value: 'player '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5503428076516375804, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
