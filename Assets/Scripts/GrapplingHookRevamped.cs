@@ -53,8 +53,8 @@ public class GrapplingHookRevamped : MonoBehaviour
     private bool canPlayGrappleHitSound;
     private bool isGrappling;
     
-    public UnityEvent OnGrapple;
-    public UnityEvent OffGrapple;
+    public UnityEvent onGrapple;
+    public UnityEvent offGrapple;
     
     private void Awake()
     {
@@ -97,7 +97,7 @@ public class GrapplingHookRevamped : MonoBehaviour
                 
                 StartCoroutine(OnGrappleAnimation());
                 
-                OnGrapple.Invoke();
+                onGrapple.Invoke();
                 grapplePoint = marker.transform.position;
                 joint.connectedAnchor = grapplePoint;
                 joint.distance = Vector2.Distance(transform.position, grapplePoint);
@@ -187,7 +187,7 @@ public class GrapplingHookRevamped : MonoBehaviour
 
     private void CancelGrapple()
     {
-        OffGrapple.Invoke();
+        offGrapple.Invoke();
         joint.enabled = false;
         isGrappling = false;
         StartCoroutine(OffGrappleAnimation());
