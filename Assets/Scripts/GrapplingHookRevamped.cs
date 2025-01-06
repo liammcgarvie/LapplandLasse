@@ -51,6 +51,7 @@ public class GrapplingHookRevamped : MonoBehaviour
     private float elapsedTime;
     private bool isPressing;
     private bool canPlayGrappleHitSound;
+    private bool canGrapple;
     private bool isGrappling;
     
     public UnityEvent onGrapple;
@@ -65,6 +66,8 @@ public class GrapplingHookRevamped : MonoBehaviour
         hook.SetActive(false);
         joint.enabled = false;
         rope.enabled = false;
+        
+        canGrapple = true;
     }
 
     private void Update()
@@ -86,9 +89,8 @@ public class GrapplingHookRevamped : MonoBehaviour
                 
             marker.transform.position = closestPoint;
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && canGrapple)
             {
-                isPressing = true;
                 rope.enabled = true;
                 hook.SetActive(true);
                 
@@ -102,6 +104,8 @@ public class GrapplingHookRevamped : MonoBehaviour
                 joint.connectedAnchor = grapplePoint;
                 joint.distance = Vector2.Distance(transform.position, grapplePoint);
                 joint.enabled = true;
+                
+                canGrapple = false;
             }
             
             if (Input.GetMouseButtonUp(0))
@@ -165,7 +169,7 @@ public class GrapplingHookRevamped : MonoBehaviour
         
         startPoint = endPoint;
         
-        while (isPressing == false)
+        while (canGrapple == false)
         {
             elapsedTime += Time.deltaTime * ropeSpeed;
             
@@ -178,6 +182,7 @@ public class GrapplingHookRevamped : MonoBehaviour
             {
                 hook.SetActive(false);
                 rope.enabled = false;
+                canGrapple = true;
                 yield break;
             }
 
