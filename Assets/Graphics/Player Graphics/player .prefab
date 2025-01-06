@@ -1179,6 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 9200108983172427031}
+  radius: 3
 --- !u!1 &5733584865383587076
 GameObject:
   m_ObjectHideFlags: 0

@@ -3359,6 +3359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'player '
       objectReference: {fileID: 0}
+    - target: {fileID: 8270920335176412929, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+      propertyPath: markerCollider
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
