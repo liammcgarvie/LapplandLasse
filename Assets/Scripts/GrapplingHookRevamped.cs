@@ -53,6 +53,7 @@ public class GrapplingHookRevamped : MonoBehaviour
     private bool canPlayGrappleHitSound;
     private bool canGrapple;
     private bool isGrappling;
+    private bool shooting;
     
     public UnityEvent onGrapple;
     public UnityEvent offGrapple;
@@ -96,14 +97,23 @@ public class GrapplingHookRevamped : MonoBehaviour
                 
                 rope.SetPosition(1, transform.position); // Players position
                 rope.SetPosition(0, transform.position); // Anchors end point
-                
-                StartCoroutine(OnGrappleAnimation());
-                
-                onGrapple.Invoke();
-                grapplePoint = marker.transform.position;
-                joint.connectedAnchor = grapplePoint;
-                joint.distance = Vector2.Distance(transform.position, grapplePoint);
-                joint.enabled = true;
+
+                if (markerHit.collider.CompareTag("Ground"))
+                {
+                    StartCoroutine(OnGrappleAnimation());
+                    
+                    onGrapple.Invoke();
+                    grapplePoint = marker.transform.position;
+                    joint.connectedAnchor = grapplePoint;
+                    joint.distance = Vector2.Distance(transform.position, grapplePoint);
+                    joint.enabled = true;
+                }
+
+                if (markerHit.collider.CompareTag("Enemy"))
+                {
+                    grapplePoint = marker.transform.position;
+                    StartCoroutine(EnemyGrappleAnimation());
+                }
                 
                 canGrapple = false;
             }
@@ -186,6 +196,60 @@ public class GrapplingHookRevamped : MonoBehaviour
                 yield break;
             }
 
+            yield return null;
+        }
+    }
+    
+    private IEnumerator EnemyGrappleAnimation()
+    {
+        elapsedTime = 0;
+        
+        startPoint = transform.position;
+        
+        canPlayGrappleHitSound = true;
+        
+        shooting = true;
+        
+        hook.SetActive(true);
+        
+        while (shooting)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                rope.SetPosition(0, transform.position);
+                yield break;
+            }
+            elapsedTime += Time.deltaTime * enemyRopeSpeed;
+            
+            endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
+            rope.SetPosition(0, endPoint);
+            hook.transform.position = endPoint;
+            
+            if (hook.transform.position == grapplePoint)
+            {
+                shooting = false;
+                startPoint = endPoint;
+                elapsedTime = 0;
+            }
+            
+            yield return null;
+        }
+
+        while (shooting == false)
+        {
+            elapsedTime += Time.deltaTime * enemyRopeSpeed;
+            
+            endPoint = Vector3.Lerp(startPoint, transform.position, elapsedTime);
+            rope.SetPosition(0, endPoint);
+            hook.transform.position = endPoint;
+            
+            if (hook.transform.position == transform.position)
+            {
+                hook.SetActive(false);
+                rope.enabled = false;
+                yield break;
+            }
+            
             yield return null;
         }
     }

@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 251938933}
   m_Layer: 3
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2262,7 +2262,7 @@ GameObject:
   - component: {fileID: 1187517714}
   m_Layer: 3
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
