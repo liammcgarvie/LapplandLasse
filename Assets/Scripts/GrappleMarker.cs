@@ -9,5 +9,7 @@ public class GrappleMarker : MonoBehaviour
     {
         // Convert mouse position to world space
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+        
+        transform.position = new Vector3(mouseWorldPos.x, mouseWorldPos.y, transform.position.z);
     }
 }
