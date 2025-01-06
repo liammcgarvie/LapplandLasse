@@ -227,11 +227,13 @@ MonoBehaviour:
   rope: {fileID: 1044483492571396677}
   cam: {fileID: 9200108983172427031}
   hook: {fileID: 4523744372377705573}
+  marker: {fileID: 4896785344249887251}
   rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
   enemyRopeSpeed: 1.5
   maxDistance: 10
   grappleCooldownTime: 0
+  radius: 3
   grappleHitSound: {fileID: 8849983659826987826}
   OnGrapple:
     m_PersistentCalls:
@@ -565,7 +567,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.9733737
+  m_Distance: 37.0751
   m_MaxDistanceOnly: 0
 --- !u!114 &8208040125333713388
 MonoBehaviour:
@@ -1091,7 +1093,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2431464127958490452}
   - component: {fileID: 792790340750862092}
-  - component: {fileID: 8270920335176412929}
   m_Layer: 0
   m_Name: marker
   m_TagString: Untagged
@@ -1166,20 +1167,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8270920335176412929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4896785344249887251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43593d6313a08a44b38bc4d91945b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 9200108983172427031}
-  radius: 3
 --- !u!1 &5733584865383587076
 GameObject:
   m_ObjectHideFlags: 0

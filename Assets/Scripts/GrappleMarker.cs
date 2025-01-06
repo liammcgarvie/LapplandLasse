@@ -35,6 +35,5 @@ public class GrappleMarker : MonoBehaviour
         {
             transform.position = mouseWorldPos;
         }
-        
     }
 }

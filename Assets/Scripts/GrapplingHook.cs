@@ -17,6 +17,8 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private Camera cam;
     [Tooltip("This is the hook object (can be a sprite for example)")]
     [SerializeField] private GameObject hook;
+    [Tooltip("This is the marker object (can be a sprite for example)")]
+    [SerializeField] private GameObject marker;
     [Tooltip("This is the rigidbody of the player")] 
     [SerializeField] private Rigidbody2D rb;
     [Tooltip("This is the speed of the grappling hook when you shoot it at a roof or a wall (the speed of the rope animation)")]
@@ -27,6 +29,8 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private float maxDistance = 100.0f;
     [Tooltip("This is the amount of time that it takes for you to be able to grapple again after disengaging the grappling hook")]
     [SerializeField] private float grappleCooldownTime = 0.5f;
+    [Tooltip("This is the radius of how far away from the mouse you can detect a grapple")]
+    [SerializeField] private float radius;
     
     [SerializeField] private AudioSource grappleHitSound;
     
@@ -35,6 +39,7 @@ public class GrapplingHook : MonoBehaviour
     private Vector3 startPoint;
     private DistanceJoint2D joint;
     private Vector2 direction;
+    private Vector2 markerPosition;
     private bool isGrappling;
     private bool canGrapple;
     private bool canPlayGrappleHitSound;
@@ -46,6 +51,12 @@ public class GrapplingHook : MonoBehaviour
     private bool hitGround;
     private float elapsedTime;
     private float grappleCooldownTimer;
+    
+    private RaycastHit2D markerHit;
+    
+    private Vector2 closestPoint;
+    
+    private string[] layers;
     
     private CircleCollider2D groundCheckCollider;
     
@@ -67,10 +78,19 @@ public class GrapplingHook : MonoBehaviour
         
         groundCheckCollider = GetComponent<CircleCollider2D>();
         groundCheckCollider.isTrigger = true;
+        
+        layers = new string[2];
+
+        layers[0] = "Ground";
+        layers[1] = "Enemy";
     }
     
     void Update()
     {
+        MarkerController();
+        
+        markerPosition = new Vector2(marker.transform.position.x, marker.transform.position.y);
+        
         isGrounded = IsGrounded();
         
         // Makes it so that you cant spam the grappling hook
@@ -145,7 +165,7 @@ public class GrapplingHook : MonoBehaviour
             {
                 hook.SetActive(true);
 
-                grapplePoint = enemyHit.point + new Vector2(direction.x * 10, direction.y * 10);
+                grapplePoint = markerPosition + new Vector2(direction.x * 10, direction.y * 10);
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
@@ -166,7 +186,7 @@ public class GrapplingHook : MonoBehaviour
             if (grappleHit.collider&& direction.y >= 0 && canGrapple && hitGround)
             {
                 OnGrapple.Invoke();
-                grapplePoint = grappleHit.point;
+                grapplePoint = markerPosition;
                 joint.connectedAnchor = grapplePoint;
                 joint.distance = Vector2.Distance(transform.position, grapplePoint);
                 joint.enabled = true;
@@ -184,12 +204,34 @@ public class GrapplingHook : MonoBehaviour
                     joint.enabled = false;
                 }
             }
+
+            if (markerHit.collider && canGrapple && direction.y >= 0)
+            {
+                OnGrapple.Invoke();
+                grapplePoint = markerPosition;
+                joint.connectedAnchor = grapplePoint;
+                joint.distance = Vector2.Distance(transform.position, grapplePoint);
+                joint.enabled = true;
+                
+                rope.enabled = true;
+                rope.SetPosition(1, transform.position); // Players position
+                rope.SetPosition(0, transform.position);  // Anchors end point
+                
+                isGrappling = true;
+                StartCoroutine(OnGrappleAnimation());
+                
+                // Prevents you from grappling too far
+                if (grappleHit.distance > maxDistance)
+                {
+                    joint.enabled = false;
+                }
+            }
             
             if (grappleHit.collider == false && enemyHit.collider == false && direction.y >= 0 && canGrapple)
             {
                 hook.SetActive(true);
                 
-                grapplePoint = mouseWorldPos;
+                grapplePoint = markerPosition;
             
                 rope.enabled = true;
                 rope.SetPosition(1, transform.position); // Players position
@@ -449,6 +491,25 @@ public class GrapplingHook : MonoBehaviour
             }
             
             yield return null;
+        }
+    }
+
+    private void MarkerController()
+    {
+        // Convert mouse position to world space
+        Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+        
+        markerHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, LayerMask.GetMask(layers));
+
+        if (markerHit.collider)
+        {
+            closestPoint = Physics2D.ClosestPoint(new Vector2(mouseWorldPos.x, mouseWorldPos.y), markerHit.collider);
+                    
+            marker.transform.position = closestPoint;
+        }
+        else if (!markerHit.collider)
+        {
+            marker.transform.position = mouseWorldPos;
         }
     }
 
