@@ -27,6 +27,8 @@ public class MyMovement : MonoBehaviour
     [SerializeField] private float acceleration = 1f;
     [Tooltip("This is the speed of which the player decelerates when stopping to move")]
     [SerializeField] private float deceleration = 1f;
+    [Tooltip("Time in seconds for the jump buffer window")]
+    [SerializeField] private float jumpBufferTime = 0.2f;
 
     private Vector2 moveInput;
     private Vector2 startPosition;
@@ -35,105 +37,85 @@ public class MyMovement : MonoBehaviour
     private bool isGrappling;
     private bool justGrappled;
     private bool accelerate;
+    private float jumpBufferCounter; // Tracks the jump buffer window time
 
     private Rigidbody2D rb;
     private CircleCollider2D groundCheckCollider;
-    
+
     public UnityEvent OnGrounded;
     public UnityEvent OffGrounded;
-    
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
         groundCheckCollider = GetComponent<CircleCollider2D>();
         groundCheckCollider.isTrigger = true;
-        
+
         startPosition = transform.position;
     }
 
     private void FixedUpdate()
     {
-        // Using velocity based movement while not using the grappling hook
-        if (isMoving && isGrappling == false && justGrappled == false)
+        if (isMoving && !isGrappling && !justGrappled)
         {
             float targetSpeed = moveInput.x * maxSpeed;
-            
-            if (rb.velocity.x == 0 || accelerate)
-            {
-                rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, targetSpeed, acceleration * Time.deltaTime), rb.velocity.y);
-            }
+            float newVelocityX = Mathf.MoveTowards(rb.velocity.x, targetSpeed, acceleration * Time.fixedDeltaTime);
+            rb.velocity = new Vector2(newVelocityX, rb.velocity.y); // Update horizontal velocity only
         }
 
-        // Makes the movement more realistic while grappling
         if (isMoving && (isGrappling || justGrappled))
         {
-            rb.AddForce(moveInput * swingForce, ForceMode2D.Impulse);
+            rb.AddForce(moveInput * swingForce, ForceMode2D.Impulse); // Add grappling force
         }
 
-        // Stops the player if it is not supposed to move
-        if (isMoving == false && isGrappling == false && justGrappled == false)
+        if (!isMoving && !isGrappling && !justGrappled)
         {
-            rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, deceleration * Time.deltaTime), rb.velocity.y);
+            float newVelocityX = Mathf.MoveTowards(rb.velocity.x, 0, deceleration * Time.fixedDeltaTime);
+            rb.velocity = new Vector2(newVelocityX, rb.velocity.y); // Gradually decelerate
         }
     }
 
     private void Update()
     {
-        if (moveInput.x > 0)
-        {
-            if (rb.velocity.x > 0)
-            {
-                accelerate = true;
-            }
-            else
-            {
-                accelerate = false;
-            }
-        }
-
-        if (moveInput.x < 0)
-        {
-            if (rb.velocity.x < 0)
-            {
-                accelerate = true;
-            }
-            else
-            {
-                accelerate = false;
-            }
-        }
-        
         isGrounded = IsGrounded();
-        
-        // This is used to switch the isGrounded variable in other scripts as well
-        switch (isGrounded)
+
+        // Handle ground transitions and jump buffer
+        if (isGrounded)
         {
-            case true:
-                OnGrounded.Invoke();
-                break;
-            case false:
-                OffGrounded.Invoke();
-                break;
+            OnGrounded.Invoke();
+            if (jumpBufferCounter > 0) // If jump was buffered, execute the jump
+            {
+                Jump();
+                jumpBufferCounter = 0f; // Clear the buffer
+            }
+        }
+        else
+        {
+            OffGrounded.Invoke();
         }
 
+        // Decrease jump buffer time
+        if (jumpBufferCounter > 0)
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
 
+        // Flip sprite and handle animations
         AnimationController();
-        
-        // If you are grappling justGrappled is set to true
+
+        // Grappling and movement fixes
         if (isGrappling)
         {
             justGrappled = true;
         }
 
-        // Sets justGrappled to false when you have landed on the ground after grappling
-        if (isGrounded && isGrappling == false)
+        if (isGrounded && !isGrappling)
         {
             justGrappled = false;
         }
-        
-        //Bugfix
-        if (isMoving && isGrappling == false && justGrappled == false)
+
+        if (isMoving && !isGrappling && !justGrappled)
         {
             if ((rb.velocity.x > 0 && moveInput.x < 0) || (rb.velocity.x < 0 && moveInput.x > 0))
             {
@@ -141,23 +123,16 @@ public class MyMovement : MonoBehaviour
             }
         }
     }
-    
-    private bool IsGrounded() // Checks if the player is on the ground
+
+    private bool IsGrounded()
     {
-        if (groundCheckCollider.IsTouchingLayers(groundLayer))
-        {
-            return true;
-        }
-        
-        return false;
+        return groundCheckCollider.IsTouchingLayers(groundLayer);
     }
 
     private void Jump()
     {
-        if (isGrounded)
-        {
-            rb.AddForce(new Vector2(0, jumpForce));
-        }
+        rb.velocity = new Vector2(rb.velocity.x, 0); // Reset vertical velocity before jump
+        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -178,36 +153,39 @@ public class MyMovement : MonoBehaviour
     {
         if (context.started)
         {
-            Jump();
+            jumpBufferCounter = jumpBufferTime; // Start the jump buffer countdown
+            if (isGrounded) // Jump immediately if grounded
+            {
+                Jump();
+            }
         }
     }
-    
-    public void PositionReset() // Can be called with events
+
+    public void PositionReset()
     {
         rb.velocity = Vector2.zero;
         transform.position = startPosition;
     }
-    
-    public void StartGrapple() // Can be called with events
+
+    public void StartGrapple()
     {
         isGrappling = true;
     }
 
-    public void EndGrapple() // Can be called with events
+    public void EndGrapple()
     {
         isGrappling = false;
     }
-    
-    public void EnemyBounce() // Can be used with events
+
+    public void EnemyBounce()
     {
-        if (isGrounded == false)
+        if (!isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0f, bounceForce), ForceMode2D.Impulse);
         }
     }
 
-    // Sets all animator booleans to false
     private void AnimationBooleansFalse()
     {
         playerAnimator.SetBool("isWalking", false);
@@ -219,59 +197,49 @@ public class MyMovement : MonoBehaviour
 
     private void AnimationController()
     {
-        // Flips the sprite
         if (rb.velocity.x > 0.01f)
         {
             armSprite.flipX = false;
             grappleArmSprite.flipX = false;
             playerSprite.flipX = false;
         }
-        
-        // Flips the sprite
+
         if (rb.velocity.x < -0.01f)
         {
             armSprite.flipX = true;
             grappleArmSprite.flipX = true;
             playerSprite.flipX = true;
         }
-        
-        // Sets animation to idle
+
         if (Mathf.Abs(rb.velocity.x) == 0 && isGrounded)
         {
             AnimationBooleansFalse();
         }
 
-        // Sets animation to walking
         if (Mathf.Abs(rb.velocity.x) > 0.01f && isGrounded)
         {
             AnimationBooleansFalse();
-            
             playerAnimator.SetBool("isWalking", true);
         }
-        
-        // Sets animation to running
+
         if (Mathf.Abs(rb.velocity.x) >= maxSpeed - 1 && isGrounded)
         {
             AnimationBooleansFalse();
-            
             playerAnimator.SetBool("isRunning", true);
         }
 
-        // Sets animation to swinging
-        if ((isGrappling || justGrappled) && isGrounded == false)
+        if ((isGrappling || justGrappled) && !isGrounded)
         {
             AnimationBooleansFalse();
-            
             playerAnimator.SetBool("isSwinging", true);
         }
 
-        // Sets animation to jumping
-        if (isGrounded == false && isGrappling == false && justGrappled == false)
+        if (!isGrounded && !isGrappling && !justGrappled)
         {
             AnimationBooleansFalse();
-            
             playerAnimator.SetBool("isJumping", true);
         }
     }
 }
+
 

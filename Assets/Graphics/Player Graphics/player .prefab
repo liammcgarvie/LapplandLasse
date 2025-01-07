@@ -425,7 +425,7 @@ MonoBehaviour:
   grappleArmSprite: {fileID: 2531558385380118913}
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 8.5
-  jumpForce: 700
+  jumpForce: 15
   bounceForce: 15
   swingForce: 0.2
   acceleration: 15
