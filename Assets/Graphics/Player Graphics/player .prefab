@@ -550,7 +550,7 @@ MonoBehaviour:
   onRespawn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2539042192761020959}
         m_TargetAssemblyTypeName: GrapplingHook, Assembly-CSharp
         m_MethodName: CancelGrapple
         m_Mode: 1
