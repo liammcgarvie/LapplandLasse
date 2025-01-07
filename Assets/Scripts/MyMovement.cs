@@ -61,18 +61,18 @@ public class MyMovement : MonoBehaviour
         {
             float targetSpeed = moveInput.x * maxSpeed;
             float newVelocityX = Mathf.MoveTowards(rb.velocity.x, targetSpeed, acceleration * Time.fixedDeltaTime);
-            rb.velocity = new Vector2(newVelocityX, rb.velocity.y); // Update horizontal velocity only
+            rb.velocity = new Vector2(newVelocityX, rb.velocity.y);
         }
 
         if (isMoving && (isGrappling || justGrappled))
         {
-            rb.AddForce(moveInput * swingForce, ForceMode2D.Impulse); // Add grappling force
+            rb.AddForce(moveInput * swingForce, ForceMode2D.Impulse);
         }
 
         if (!isMoving && !isGrappling && !justGrappled)
         {
             float newVelocityX = Mathf.MoveTowards(rb.velocity.x, 0, deceleration * Time.fixedDeltaTime);
-            rb.velocity = new Vector2(newVelocityX, rb.velocity.y); // Gradually decelerate
+            rb.velocity = new Vector2(newVelocityX, rb.velocity.y);
         }
     }
 
