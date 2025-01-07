@@ -49,6 +49,7 @@ public class GrapplingHookRevamped : MonoBehaviour
 
     private string[] grappleLayers;
     private float elapsedTime;
+    private float distance;
     private bool isPressing;
     private bool canPlayGrappleHitSound;
     private bool canGrapple;
@@ -78,6 +79,8 @@ public class GrapplingHookRevamped : MonoBehaviour
             isPressing = true;
         }
         
+        distance = Vector3.Distance(transform.position, grapplePoint);
+        
         rope.SetPosition(1, transform.position); //Makes sure that the rope does not disconnect from the player
         
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
@@ -90,7 +93,7 @@ public class GrapplingHookRevamped : MonoBehaviour
                 
             marker.transform.position = closestPoint;
 
-            if (Input.GetMouseButtonDown(0) && canGrapple)
+            if (Input.GetMouseButtonDown(0) && canGrapple && distance < maxDistance)
             {
                 rope.enabled = true;
                 hook.SetActive(true);
@@ -140,8 +143,6 @@ public class GrapplingHookRevamped : MonoBehaviour
     
     private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it
     {
-        float distance = Vector3.Distance(transform.position, grapplePoint);
-
         if (distance > maxDistance)
         {
             StartCoroutine(OffGrappleAnimation());
