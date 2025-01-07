@@ -152,11 +152,6 @@ public class MyMovement : MonoBehaviour
         return false;
     }
 
-    float TranslateInputToVelocityX(Vector2 input)
-    {
-        return input.x;
-    }
-
     private void Jump()
     {
         if (isGrounded)

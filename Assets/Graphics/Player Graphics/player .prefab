@@ -430,6 +430,7 @@ MonoBehaviour:
   swingForce: 0.2
   acceleration: 15
   deceleration: 30
+  jumpBufferTime: 0.2
   OnGrounded:
     m_PersistentCalls:
       m_Calls:
