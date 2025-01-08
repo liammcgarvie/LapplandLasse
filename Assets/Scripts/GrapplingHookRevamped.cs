@@ -40,8 +40,16 @@ public class GrapplingHookRevamped : MonoBehaviour
     [SerializeField] private AudioSource grappleHitSound;
     [SerializeField] private AudioSource grappleShootSound;
     
-    private RaycastHit2D markerHit;
+    private RaycastHit2D grappleHit;
+    private RaycastHit2D enemyHit;
     private Vector2 closestPoint;
+    private Vector2 closestGrapplePoint;
+    private Vector2 closestEnemyPoint;
+    
+    private float grappleDistance;
+    private float enemyDistance;
+    
+    private Collider2D collider;
     
     private Vector3 grapplePoint;
     private Vector3 startPoint;
@@ -85,15 +93,47 @@ public class GrapplingHookRevamped : MonoBehaviour
         
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
         
-        markerHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, LayerMask.GetMask(grappleLayers));
+        grappleHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, grappleLayer);
+        
+        enemyHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, enemyPullLayer);
 
-        if (markerHit.collider)
+        if (grappleHit.collider || enemyHit.collider)
         {
-            closestPoint = Physics2D.ClosestPoint(new Vector2(mouseWorldPos.x, mouseWorldPos.y), markerHit.collider);
-                
+            if (grappleHit.collider && enemyHit.collider == false)
+            {
+                collider = grappleHit.collider;
+                closestPoint = Physics2D.ClosestPoint(new Vector2(mouseWorldPos.x, mouseWorldPos.y), grappleHit.collider);
+            }
+
+            if (enemyHit.collider && grappleHit.collider == false)
+            {
+                collider = enemyHit.collider;
+                closestPoint = Physics2D.ClosestPoint(new Vector2(mouseWorldPos.x, mouseWorldPos.y), enemyHit.collider);
+            }
+
+            if (grappleHit.collider && enemyHit.collider)
+            {
+                closestGrapplePoint = Physics2D.ClosestPoint(new Vector2(mouseWorldPos.x, mouseWorldPos.y), grappleHit.collider);
+                closestEnemyPoint = Physics2D.ClosestPoint(new Vector2(mouseWorldPos.x, mouseWorldPos.y), enemyHit.collider);
+
+                grappleDistance = Vector2.Distance(closestGrapplePoint, new Vector2(mouseWorldPos.x, mouseWorldPos.y));
+                enemyDistance = Vector2.Distance(closestEnemyPoint, new Vector2(mouseWorldPos.x, mouseWorldPos.y));
+
+                if (grappleDistance < enemyDistance)
+                {
+                    collider = grappleHit.collider;
+                    closestPoint = closestGrapplePoint;
+                }
+                else if (enemyDistance < grappleDistance)
+                {
+                    collider = enemyHit.collider;
+                    closestPoint = closestEnemyPoint;
+                }
+            }
+            
             marker.transform.position = closestPoint;
 
-            if (Input.GetMouseButtonDown(0) && canGrapple && distance < maxDistance)
+            if (Input.GetMouseButtonDown(0) && canGrapple)
             {
                 rope.enabled = true;
                 hook.SetActive(true);
@@ -101,7 +141,7 @@ public class GrapplingHookRevamped : MonoBehaviour
                 rope.SetPosition(1, transform.position); // Players position
                 rope.SetPosition(0, transform.position); // Anchors end point
 
-                if (markerHit.collider.CompareTag("Ground"))
+                if (collider.CompareTag("Ground") && distance <= maxDistance)
                 {
                     StartCoroutine(OnGrappleAnimation());
                     
@@ -110,15 +150,15 @@ public class GrapplingHookRevamped : MonoBehaviour
                     joint.connectedAnchor = grapplePoint;
                     joint.distance = Vector2.Distance(transform.position, grapplePoint);
                     joint.enabled = true;
+                    canGrapple = false;
                 }
 
-                if (markerHit.collider.CompareTag("Enemy"))
+                if (collider.CompareTag("Enemy") && distance <= maxDistance)
                 {
                     grapplePoint = marker.transform.position;
                     StartCoroutine(EnemyGrappleAnimation());
+                    canGrapple = false;
                 }
-                
-                canGrapple = false;
             }
             
             if (Input.GetMouseButtonUp(0))
@@ -145,7 +185,7 @@ public class GrapplingHookRevamped : MonoBehaviour
     {
         if (distance > maxDistance)
         {
-            StartCoroutine(OffGrappleAnimation());
+            CancelGrapple();
             yield break;
         }
         
@@ -180,7 +220,9 @@ public class GrapplingHookRevamped : MonoBehaviour
         
         startPoint = endPoint;
         
-        while (canGrapple == false)
+        shooting = false;
+        
+        while (shooting == false)
         {
             elapsedTime += Time.deltaTime * ropeSpeed;
             
@@ -248,6 +290,7 @@ public class GrapplingHookRevamped : MonoBehaviour
             {
                 hook.SetActive(false);
                 rope.enabled = false;
+                canGrapple = true;
                 yield break;
             }
             
