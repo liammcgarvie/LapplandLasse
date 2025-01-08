@@ -690,7 +690,7 @@ MonoBehaviour:
   rb: {fileID: 4635141200256120795}
   ropeSpeed: 7
   enemyRopeSpeed: 1.5
-  maxDistance: 10
+  maxDistance: 30
   radius: 3
   hookCollider: {fileID: 4414889448409629555}
   joint: {fileID: 3048690935835443429}

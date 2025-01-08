@@ -139,7 +139,7 @@ public class GrapplingHookRevamped : MonoBehaviour
             
             marker.transform.position = closestPoint;
 
-            if (Input.GetMouseButtonDown(0) && canGrapple)
+            if (Input.GetMouseButtonDown(0))
             {
                 grapplePoint = marker.transform.position;
                 
@@ -189,6 +189,8 @@ public class GrapplingHookRevamped : MonoBehaviour
     
     private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it
     {
+        StopCoroutine(OffGrappleAnimation());
+        
         if (distance > maxDistance)
         {
             CancelGrapple();
@@ -230,6 +232,11 @@ public class GrapplingHookRevamped : MonoBehaviour
         
         while (shooting == false)
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+                yield break;
+            }
+            
             elapsedTime += Time.deltaTime * ropeSpeed;
             
             endPoint = Vector3.Lerp(startPoint, transform.position, elapsedTime);
