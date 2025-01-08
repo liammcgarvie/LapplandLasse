@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -129,6 +130,11 @@ public class GrapplingHookRevamped : MonoBehaviour
                     collider = enemyHit.collider;
                     closestPoint = closestEnemyPoint;
                 }
+                else
+                {
+                    collider = grappleHit.collider;
+                    closestPoint = closestGrapplePoint;
+                }
             }
             
             marker.transform.position = closestPoint;
@@ -171,13 +177,6 @@ public class GrapplingHookRevamped : MonoBehaviour
         else
         {
             marker.transform.position = mouseWorldPos;
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            isPressing = false;
-            
-            CancelGrapple();
         }
     }
     
