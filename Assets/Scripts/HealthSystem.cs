@@ -21,7 +21,7 @@ public class HealthSystem : MonoBehaviour
             Death();
         }
         
-        Debug.Log("Health: " + currentHealth);
+        //Debug.Log("Health: " + currentHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D other)

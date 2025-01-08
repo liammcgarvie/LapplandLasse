@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -83,6 +82,7 @@ public class GrapplingHookRevamped : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(grapplePoint);
         if (Input.GetMouseButtonDown(0))
         {
             isPressing = true;
@@ -141,18 +141,20 @@ public class GrapplingHookRevamped : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && canGrapple)
             {
-                rope.enabled = true;
-                hook.SetActive(true);
+                grapplePoint = marker.transform.position;
                 
-                rope.SetPosition(1, transform.position); // Players position
-                rope.SetPosition(0, transform.position); // Anchors end point
-
                 if (collider.CompareTag("Ground") && distance <= maxDistance)
                 {
+                    Debug.Log("hej");
+                    rope.enabled = true;
+                    hook.SetActive(true);
+                
+                    rope.SetPosition(1, transform.position); // Players position
+                    rope.SetPosition(0, transform.position); // Anchors end point
+                    
                     StartCoroutine(OnGrappleAnimation());
                     
                     onGrapple.Invoke();
-                    grapplePoint = marker.transform.position;
                     joint.connectedAnchor = grapplePoint;
                     joint.distance = Vector2.Distance(transform.position, grapplePoint);
                     joint.enabled = true;
@@ -161,22 +163,27 @@ public class GrapplingHookRevamped : MonoBehaviour
 
                 if (collider.CompareTag("Enemy") && distance <= maxDistance)
                 {
-                    grapplePoint = marker.transform.position;
+                    rope.enabled = true;
+                    hook.SetActive(true);
+                
+                    rope.SetPosition(1, transform.position); // Players position
+                    rope.SetPosition(0, transform.position); // Anchors end point
+                    
                     StartCoroutine(EnemyGrappleAnimation());
                     canGrapple = false;
                 }
-            }
-            
-            if (Input.GetMouseButtonUp(0))
-            {
-                isPressing = false;
-                
-                CancelGrapple();
             }
         }
         else
         {
             marker.transform.position = mouseWorldPos;
+        }
+        
+        if (Input.GetMouseButtonUp(0))
+        {
+            isPressing = false;
+                
+            CancelGrapple();
         }
     }
     
@@ -297,8 +304,9 @@ public class GrapplingHookRevamped : MonoBehaviour
         }
     }
 
-    private void CancelGrapple()
+    public void CancelGrapple()
     {
+        isPressing = false;
         offGrapple.Invoke();
         joint.enabled = false;
         isGrappling = false;
