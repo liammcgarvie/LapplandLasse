@@ -50,6 +50,7 @@ public class GrapplingHookRevamped : MonoBehaviour
     private float enemyDistance;
     
     private Collider2D collider;
+    private CircleCollider2D groundCheckCollider;
     
     private Vector3 grapplePoint;
     private Vector3 startPoint;
@@ -63,6 +64,7 @@ public class GrapplingHookRevamped : MonoBehaviour
     private bool canGrapple;
     private bool isGrappling;
     private bool shooting;
+    private bool isGrounded;
     
     public UnityEvent onGrapple;
     public UnityEvent offGrapple;
@@ -78,10 +80,15 @@ public class GrapplingHookRevamped : MonoBehaviour
         rope.enabled = false;
         
         canGrapple = true;
+        
+        groundCheckCollider = GetComponent<CircleCollider2D>();
+        groundCheckCollider.isTrigger = true;
     }
 
     private void Update()
     {
+        isGrounded = IsGrounded();
+        
         //Debug.Log(grapplePoint);
         if (Input.GetMouseButtonDown(0))
         {
@@ -159,6 +166,7 @@ public class GrapplingHookRevamped : MonoBehaviour
                     joint.distance = Vector2.Distance(transform.position, grapplePoint);
                     joint.enabled = true;
                     canGrapple = false;
+                    isGrappling = true;
                 }
 
                 if (collider.CompareTag("Enemy") && distance <= maxDistance)
@@ -182,9 +190,37 @@ public class GrapplingHookRevamped : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isPressing = false;
+            
+            isGrappling = false;
                 
             CancelGrapple();
         }
+
+        if (isGrappling && isGrounded)
+        {
+            joint.enabled = false;
+            offGrapple.Invoke();
+        }
+        else if (isGrappling && isGrounded == false)
+        {
+            joint.enabled = true;
+            onGrapple.Invoke();
+        }
+        else
+        {
+            joint.enabled = false;
+            offGrapple.Invoke();
+        }
+    }
+    
+    private bool IsGrounded() // Checks if the player is on the ground
+    {
+        if (groundCheckCollider.IsTouchingLayers(groundLayer))
+        {
+            return true;
+        }
+        
+        return false;
     }
     
     private IEnumerator OnGrappleAnimation() // Makes the rope move towards the grapple point and not teleport to it
