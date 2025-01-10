@@ -385,4 +385,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftDistance: 0
   rightDistance: 0
+  upDistance: 0
+  downDistance: 0
   speed: 0

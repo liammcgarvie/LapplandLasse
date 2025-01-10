@@ -5,7 +5,7 @@ public class EnemyHookCollision : MonoBehaviour
 {
     [Tooltip("This is the layer where a player will be able to jump")]
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private CircleCollider2D groundCheckCollider;
+    [SerializeField] private BoxCollider2D groundCheckCollider;
     [SerializeField] private GameObject player;
     [SerializeField] private Rigidbody2D playerRb;
     [SerializeField] private LineRenderer rope;

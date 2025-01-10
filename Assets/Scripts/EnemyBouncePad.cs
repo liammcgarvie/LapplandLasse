@@ -6,7 +6,7 @@ public class EnemyBouncePad : MonoBehaviour
     [Tooltip("This is the layer where a player will be able to jump")]
     [SerializeField] private LayerMask groundLayer;
     [Tooltip("This is the collider that is on the player which checks if the player is on the ground")]
-    [SerializeField] private CircleCollider2D groundCheckCollider;
+    [SerializeField] private BoxCollider2D groundCheckCollider;
     
     private int i;
     

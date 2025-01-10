@@ -1041,7 +1041,7 @@ PrefabInstance:
     - target: {fileID: 2254546485627721864, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: groundCheckCollider
       value: 
-      objectReference: {fileID: 573829619}
+      objectReference: {fileID: 1346110573}
     - target: {fileID: 2254546485627721864, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: onJumped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1086,26 +1086,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
-      propertyPath: upDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
-      propertyPath: downDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
-      propertyPath: leftDistance
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
-      propertyPath: rightDistance
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8987519831230831972, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: m_Name
       value: 'flying enemy 1 '
@@ -1126,11 +1106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d78f8ce0c3db274096aa5cc46074872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &573829619 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 7408087453142990835, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
-  m_PrefabInstance: {fileID: 653840147143629766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &730205374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2548,11 @@ MonoBehaviour:
   onTriggerEnterWithPosition:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &1346110573 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5676643843199586373, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+  m_PrefabInstance: {fileID: 653840147143629766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1651922594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2592,7 +2572,7 @@ PrefabInstance:
     - target: {fileID: 6095809595133982322, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: groundCheckCollider
       value: 
-      objectReference: {fileID: 573829619}
+      objectReference: {fileID: 1346110573}
     - target: {fileID: 6095809595133982322, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: onJumped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

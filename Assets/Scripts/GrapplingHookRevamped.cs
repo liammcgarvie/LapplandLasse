@@ -50,7 +50,7 @@ public class GrapplingHookRevamped : MonoBehaviour
     private float enemyDistance;
     
     private Collider2D collider;
-    private CircleCollider2D groundCheckCollider;
+    private BoxCollider2D groundCheckCollider;
     
     private Vector3 grapplePoint;
     private Vector3 startPoint;
@@ -81,7 +81,7 @@ public class GrapplingHookRevamped : MonoBehaviour
         
         canGrapple = true;
         
-        groundCheckCollider = GetComponent<CircleCollider2D>();
+        groundCheckCollider = GetComponent<BoxCollider2D>();
         groundCheckCollider.isTrigger = true;
     }
 

@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -40,7 +39,7 @@ public class MyMovement : MonoBehaviour
     private float jumpBufferCounter; // Tracks the jump buffer window time
 
     private Rigidbody2D rb;
-    private CircleCollider2D groundCheckCollider;
+    private BoxCollider2D groundCheckCollider;
 
     public UnityEvent OnGrounded;
     public UnityEvent OffGrounded;
@@ -49,7 +48,7 @@ public class MyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        groundCheckCollider = GetComponent<CircleCollider2D>();
+        groundCheckCollider = GetComponent<BoxCollider2D>();
         groundCheckCollider.isTrigger = true;
 
         startPosition = transform.position;
