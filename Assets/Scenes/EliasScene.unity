@@ -1086,6 +1086,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+      propertyPath: upDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+      propertyPath: downDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+      propertyPath: leftDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
+      propertyPath: rightDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8987519831230831972, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: m_Name
       value: 'flying enemy 1 '

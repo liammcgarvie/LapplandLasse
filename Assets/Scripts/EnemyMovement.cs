@@ -4,6 +4,8 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float leftDistance;
     [SerializeField] private float rightDistance;
+    [SerializeField] private float upDistance;
+    [SerializeField] private float downDistance;
     
     [SerializeField] private float speed;
     
@@ -11,6 +13,8 @@ public class EnemyMovement : MonoBehaviour
 
     private bool movingRight;
     private bool movingLeft;
+    private bool movingUp;
+    private bool movingDown;
     
     private float distance;
     
@@ -19,6 +23,8 @@ public class EnemyMovement : MonoBehaviour
         startPosition = transform.position;
 
         movingRight = true;
+        movingUp = true;
+        movingDown = false;
         movingLeft = false;
     }
 
@@ -37,6 +43,18 @@ public class EnemyMovement : MonoBehaviour
             movingRight = false;
             movingLeft = true;
         }
+
+        if (transform.position.y < startPosition.y && distance >= downDistance)
+        {
+            movingDown = false;
+            movingUp = true;
+        }
+        
+        if (transform.position.y > startPosition.y && distance >= upDistance)
+        {
+            movingDown = true;
+            movingUp = false;
+        }
         
         MovementController();
     }
@@ -51,6 +69,16 @@ public class EnemyMovement : MonoBehaviour
         if (movingLeft && !movingRight)
         {
             transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
+        }
+
+        if (movingUp && !movingDown)
+        {
+            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        }
+
+        if (movingDown && !movingUp)
+        {
+            transform.position += new Vector3(0, -speed * Time.deltaTime, 0);
         }
     }
 }

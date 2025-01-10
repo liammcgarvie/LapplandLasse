@@ -311,7 +311,7 @@ public class GrapplingHookRevamped : MonoBehaviour
                 rope.SetPosition(0, transform.position);
                 yield break;
             }
-            elapsedTime += Time.deltaTime * enemyRopeSpeed;
+            elapsedTime += Time.deltaTime * ropeSpeed;
             
             endPoint = Vector3.Lerp(startPoint, grapplePoint, elapsedTime);
             rope.SetPosition(0, endPoint);
