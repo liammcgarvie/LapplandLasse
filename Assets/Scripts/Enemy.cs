@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
         startPos = transform.position;
         bouncePadStartPos = bouncePad.transform.position;
         
-        GameManager.Instance.RegisterEnemy(this);
+        GameManager.gameManager.RegisterEnemy(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

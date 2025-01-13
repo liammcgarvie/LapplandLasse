@@ -8,13 +8,13 @@ public class GameManager : MonoBehaviour
     
     public UnityEvent onPlayerDeath;
     
-    public static GameManager Instance;
+    public static GameManager gameManager;
     
     private void Awake()
     {
-        if (Instance == null)
+        if (gameManager == null)
         {
-            Instance = this;
+            gameManager = this;
         }
         else
         {
@@ -32,8 +32,10 @@ public class GameManager : MonoBehaviour
     
     private void RespawnAllEnemies()
     {
+        Debug.Log("Respawning all enemies");
         foreach (Enemy enemy in enemies)
         {
+            Debug.Log("Respawning one enemy");
             enemy.Respawn();
         }
     }

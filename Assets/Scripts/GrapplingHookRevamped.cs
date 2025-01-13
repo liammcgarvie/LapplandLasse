@@ -152,7 +152,6 @@ public class GrapplingHookRevamped : MonoBehaviour
                 
                 if (collider.CompareTag("Ground") && distance <= maxDistance)
                 {
-                    Debug.Log("hej");
                     rope.enabled = true;
                     hook.SetActive(true);
                 
