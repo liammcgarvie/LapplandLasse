@@ -35,7 +35,10 @@ public class SceneChange : MonoBehaviour
     
     private IEnumerator WaitForAnimation()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 2);
-        NextScene();
+        if (animator != null)
+        {
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 2);
+            NextScene();
+        }
     }
 }
