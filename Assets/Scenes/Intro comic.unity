@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aed0c73f37adbd4787200440a971b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &633971485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +506,7 @@ GameObject:
   - component: {fileID: 880217504}
   - component: {fileID: 880217503}
   - component: {fileID: 880217502}
+  - component: {fileID: 880217505}
   m_Layer: 0
   m_Name: Panel 1
   m_TagString: Untagged
@@ -600,6 +602,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880217505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880217501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aed0c73f37adbd4787200440a971b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 880217502}
 --- !u!1 &1455247968
 GameObject:
   m_ObjectHideFlags: 0
