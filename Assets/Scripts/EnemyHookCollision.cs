@@ -20,6 +20,8 @@ public class EnemyHookCollision : MonoBehaviour
     private Transform pullTarget;
     
     public UnityEvent OnHit;
+
+    public UnityEvent respawn;
     
     private void Awake()
     {
@@ -58,6 +60,14 @@ public class EnemyHookCollision : MonoBehaviour
         if (pulling == false)
         {
             playerAnimator.SetBool("isPulling", false);
+        }
+    }
+
+    public void CheckForRespawn()
+    {
+        if (pulling == false)
+        {
+            respawn.Invoke();
         }
     }
     

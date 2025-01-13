@@ -477,12 +477,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  respawn:
+  checkForRespawn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3346046528597817333}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayerRespawn
+      - m_Target: {fileID: 83143649458063514}
+        m_TargetAssemblyTypeName: EnemyHookCollision, Assembly-CSharp
+        m_MethodName: CheckForRespawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1116,10 +1116,13 @@ MonoBehaviour:
   offsetX: 0
   OnHit:
     m_PersistentCalls:
+      m_Calls: []
+  respawn:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GrapplingHook, Assembly-CSharp
-        m_MethodName: EnemyHit
+      - m_Target: {fileID: 3346046528597817333}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayerRespawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

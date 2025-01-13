@@ -7,7 +7,7 @@ public class HealthSystem : MonoBehaviour
     
     private int currentHealth;
     
-    public UnityEvent respawn;
+    public UnityEvent checkForRespawn;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class HealthSystem : MonoBehaviour
     private void HitEnemy() // When you hit an enemy and take damage
     {
         LoseHealth(1);
-        respawn.Invoke();
+        checkForRespawn.Invoke();
     }
 
     private void Death() // Is called when you lose all your health
