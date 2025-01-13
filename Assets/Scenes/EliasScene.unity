@@ -2599,9 +2599,9 @@ MonoBehaviour:
   triggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 735301133}
-        m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
-        m_MethodName: Respawn
+      - m_Target: {fileID: 653840147143629767}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayerRespawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3433,6 +3433,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+--- !u!114 &653840147143629767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3346046528597817333, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+  m_PrefabInstance: {fileID: 653840147143629766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0623f8232a4354a8488990947d7b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
