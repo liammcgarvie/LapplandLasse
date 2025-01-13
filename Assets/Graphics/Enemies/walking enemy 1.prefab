@@ -211,6 +211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftDistance: 0
   rightDistance: 0
+  upDistance: 0
+  downDistance: 0
   speed: 0
 --- !u!1 &7272516361863678809
 GameObject:
@@ -377,6 +379,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5964310059191592238}
         m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6095809595133982322}
+        m_TargetAssemblyTypeName: EnemyBouncePad, Assembly-CSharp
+        m_MethodName: ChangeI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

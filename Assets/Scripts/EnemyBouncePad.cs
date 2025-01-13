@@ -48,4 +48,9 @@ public class EnemyBouncePad : MonoBehaviour
         
         return false;
     }
+
+    public void ChangeI()
+    {
+        i = 0;
+    }
 }

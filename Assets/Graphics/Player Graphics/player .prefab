@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 2161287474077960186}
   - component: {fileID: 5676643843199586373}
   - component: {fileID: 2539042192761020959}
+  - component: {fileID: 3346046528597817333}
   m_Layer: 7
   m_Name: 'player '
   m_TagString: Player
@@ -479,9 +480,9 @@ MonoBehaviour:
   respawn:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1546563624720586966}
-        m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
-        m_MethodName: Respawn
+      - m_Target: {fileID: 3346046528597817333}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayerRespawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -717,6 +718,33 @@ MonoBehaviour:
       - m_Target: {fileID: 8145268263927556324}
         m_TargetAssemblyTypeName: MyMovement, Assembly-CSharp
         m_MethodName: EndGrapple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3346046528597817333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949567870988115298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0623f8232a4354a8488990947d7b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1546563624720586966}
+        m_TargetAssemblyTypeName: SpawnAndCheckpoint, Assembly-CSharp
+        m_MethodName: Respawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
