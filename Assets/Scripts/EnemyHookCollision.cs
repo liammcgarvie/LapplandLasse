@@ -18,6 +18,8 @@ public class EnemyHookCollision : MonoBehaviour
     [SerializeField] private AudioSource chompSound3;
     [SerializeField] private AudioSource chompSound4;
     
+    public UnityEvent playPlayerDeathSound;
+    
     private bool pulling;
     private bool isGrounded;
 
@@ -74,6 +76,7 @@ public class EnemyHookCollision : MonoBehaviour
     {
         if (pulling == false)
         {
+            playPlayerDeathSound.Invoke();
             respawn.Invoke();
         }
     }

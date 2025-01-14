@@ -641,6 +641,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  deathSound1: {fileID: 0}
+  deathSound2: {fileID: 0}
+  deathSound3: {fileID: 0}
+  deathSound4: {fileID: 0}
+  deathSound5: {fileID: 0}
   checkForRespawn:
     m_PersistentCalls:
       m_Calls:
@@ -1410,6 +1415,21 @@ MonoBehaviour:
   chompSound2: {fileID: 5829122377770105980}
   chompSound3: {fileID: 5130621641907872794}
   chompSound4: {fileID: 2659891217889408791}
+  playPlayerDeathSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8208040125333713388}
+        m_TargetAssemblyTypeName: HealthSystem, Assembly-CSharp
+        m_MethodName: DeathSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHit:
     m_PersistentCalls:
       m_Calls: []
