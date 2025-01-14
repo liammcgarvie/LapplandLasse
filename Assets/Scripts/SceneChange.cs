@@ -32,6 +32,11 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Titelscene");
     }
+
+    public void BonusLevel()
+    {
+        SceneManager.LoadScene("LiamScene4");
+    }
     
     private IEnumerator WaitForAnimation()
     {
