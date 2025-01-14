@@ -357,7 +357,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (101)
@@ -553,7 +561,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (21)
@@ -835,6 +851,18 @@ PrefabInstance:
     - target: {fileID: -6100100192359188124, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
@@ -1398,7 +1426,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (11)
@@ -1548,7 +1584,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (81)
@@ -1703,7 +1747,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (80)
@@ -2244,7 +2296,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (76)
@@ -2454,7 +2514,7 @@ PrefabInstance:
     - target: {fileID: 7714449911547904734, guid: f69de328070177c4ca9ad11b96618798, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
     - target: {fileID: 8112665888309616678, guid: f69de328070177c4ca9ad11b96618798, type: 3}
       propertyPath: m_Type
       value: 0
@@ -2483,7 +2543,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike
@@ -3187,7 +3255,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (36)
@@ -3381,7 +3457,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (15)
@@ -3447,7 +3531,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (50)
@@ -4157,7 +4249,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (104)
@@ -4366,6 +4466,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 287529059}
   m_SourcePrefab: {fileID: 100100000, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+--- !u!114 &273922968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3346046528597817333, guid: a1781270ee76ef64d961e588d24ca056, type: 3}
+  m_PrefabInstance: {fileID: 273922967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0623f8232a4354a8488990947d7b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &275666352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4923,7 +5034,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (20)
@@ -5244,7 +5363,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (4)
@@ -5327,8 +5454,24 @@ PrefabInstance:
       value: Respawn
       objectReference: {fileID: 0}
     - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SpawnAndCheckpoint, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5528,7 +5671,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (68)
@@ -5589,7 +5740,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (14)
@@ -6928,7 +7087,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (35)
@@ -7659,7 +7826,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (39)
@@ -8345,7 +8520,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (62)
@@ -9008,7 +9191,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (72)
@@ -9158,7 +9349,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (61)
@@ -9608,7 +9807,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (22)
@@ -9679,7 +9886,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (10)
@@ -11003,7 +11218,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (71)
@@ -11764,7 +11987,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (32)
@@ -12061,7 +12292,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (18)
@@ -12122,7 +12361,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (1)
@@ -13401,7 +13648,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (54)
@@ -13467,7 +13722,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (7)
@@ -14477,7 +14740,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (30)
@@ -14866,7 +15137,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (47)
@@ -15694,7 +15973,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (100)
@@ -15964,7 +16251,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (65)
@@ -16842,7 +17137,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (5)
@@ -16903,7 +17206,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (67)
@@ -17151,7 +17462,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (44)
@@ -17476,7 +17795,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (59)
@@ -17810,7 +18137,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (29)
@@ -18131,7 +18466,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (70)
@@ -18202,7 +18545,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (102)
@@ -19126,7 +19477,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (52)
@@ -19912,14 +20271,18 @@ PrefabInstance:
     - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
     - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SpawnAndCheckpoint, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Respawn
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1989875639725066807, guid: c74911dc5b199e54684fe856e75dfce7, type: 3}
       propertyPath: triggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -60045,7 +60408,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (34)
@@ -61483,7 +61854,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (38)
@@ -61830,7 +62209,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (55)
@@ -61891,7 +62278,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (63)
@@ -62300,7 +62695,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (58)
@@ -62371,7 +62774,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (17)
@@ -62605,7 +63016,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (27)
@@ -62666,7 +63085,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (16)
@@ -62857,7 +63284,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (3)
@@ -63535,7 +63970,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (56)
@@ -63601,7 +64044,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (51)
@@ -64281,7 +64732,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (74)
@@ -64446,7 +64905,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (48)
@@ -64512,7 +64979,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (107)
@@ -64836,7 +65311,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (69)
@@ -65058,7 +65541,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (12)
@@ -66332,7 +66823,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (28)
@@ -66575,7 +67074,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (41)
@@ -67243,7 +67750,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (106)
@@ -67736,7 +68251,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (13)
@@ -68028,7 +68551,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (26)
@@ -68285,7 +68816,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (99)
@@ -68346,7 +68885,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (103)
@@ -68690,7 +69237,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (31)
@@ -69939,7 +70494,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (105)
@@ -71095,7 +71658,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (49)
@@ -71156,7 +71727,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (37)
@@ -71342,7 +71921,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (64)
@@ -71538,7 +72125,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (46)
@@ -71859,7 +72454,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (24)
@@ -71920,7 +72523,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (57)
@@ -72184,7 +72795,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (9)
@@ -72245,7 +72864,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (45)
@@ -72567,7 +73194,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (6)
@@ -72740,7 +73375,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (23)
@@ -73061,7 +73704,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (78)
@@ -73265,7 +73916,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (82)
@@ -74051,7 +74710,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (40)
@@ -75137,7 +75804,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (98)
@@ -75272,7 +75947,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (43)
@@ -76205,7 +76888,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (19)
@@ -76281,7 +76972,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (33)
@@ -76342,7 +77041,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (97)
@@ -76546,7 +77253,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (60)
@@ -76836,7 +77551,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (8)
@@ -77027,7 +77750,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (66)
@@ -77224,7 +77955,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (77)
@@ -77476,7 +78215,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (53)
@@ -77643,7 +78390,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (25)
@@ -78212,7 +78967,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (79)
@@ -78386,7 +79149,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (42)
@@ -78556,7 +79327,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (75)
@@ -78918,7 +79697,15 @@ PrefabInstance:
     - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1767177416}
+      objectReference: {fileID: 273922968}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayerRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 871486625087947327, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
+      propertyPath: onTriggerEnterWithPosition.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 884793214791067979, guid: cb2a9db1cbdda1f47bc8013654faf596, type: 3}
       propertyPath: m_Name
       value: Spike (73)
