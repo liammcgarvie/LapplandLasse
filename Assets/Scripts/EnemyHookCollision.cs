@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,11 @@ public class EnemyHookCollision : MonoBehaviour
     [SerializeField] private LineRenderer rope;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private float offsetX = 1.0f;
+    
+    [SerializeField] private AudioSource chompSound1;
+    [SerializeField] private AudioSource chompSound2;
+    [SerializeField] private AudioSource chompSound3;
+    [SerializeField] private AudioSource chompSound4;
     
     private bool pulling;
     private bool isGrounded;
@@ -51,6 +57,7 @@ public class EnemyHookCollision : MonoBehaviour
         {
             if (Vector3.Distance(player.transform.position, pullTarget.position) <= offsetX + 0.5f)
             {
+                RandomChompSound();
                 pullTarget.gameObject.SetActive(false);
                 pullTarget = null;
                 pulling = false;
@@ -127,6 +134,28 @@ public class EnemyHookCollision : MonoBehaviour
             playerPos = player.transform.position;
             pulling = true;
             pullTarget = other.transform;
+        }
+    }
+
+    private void RandomChompSound()
+    {
+        int random = Random.Range(0, 4);
+
+        if (random == 0)
+        {
+            chompSound1.Play();
+        }
+        else if (random == 1)
+        {
+            chompSound2.Play();
+        }
+        else if (random == 2)
+        {
+            chompSound3.Play();
+        }
+        else if (random == 3)
+        {
+            chompSound4.Play();
         }
     }
 }

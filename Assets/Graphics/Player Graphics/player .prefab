@@ -1406,6 +1406,10 @@ MonoBehaviour:
   rope: {fileID: 1044483492571396677}
   playerAnimator: {fileID: 2641195189766255520}
   offsetX: 0
+  chompSound1: {fileID: 61225531181675125}
+  chompSound2: {fileID: 5829122377770105980}
+  chompSound3: {fileID: 5130621641907872794}
+  chompSound4: {fileID: 2659891217889408791}
   OnHit:
     m_PersistentCalls:
       m_Calls: []
