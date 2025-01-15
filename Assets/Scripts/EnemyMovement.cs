@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     
     [SerializeField] private float speed;
     
+    [SerializeField] private SpriteRenderer sprite;
+    
     private Vector3 startPosition;
 
     private bool movingRight;
@@ -63,11 +65,13 @@ public class EnemyMovement : MonoBehaviour
     {
         if (movingRight && !movingLeft)
         {
+            sprite.flipX = true;
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
 
         if (movingLeft && !movingRight)
         {
+            sprite.flipX = false;
             transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
         }
 

@@ -400,3 +400,4 @@ MonoBehaviour:
   upDistance: 0
   downDistance: 0
   speed: 0
+  sprite: {fileID: 2443314719851228526}
