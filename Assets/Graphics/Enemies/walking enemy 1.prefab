@@ -215,6 +215,7 @@ MonoBehaviour:
   downDistance: 0
   speed: 0
   sprite: {fileID: 3794723345774603243}
+  animator: {fileID: 5241008210737778030}
 --- !u!1 &7272516361863678809
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
     
     [SerializeField] private SpriteRenderer sprite;
     
+    [SerializeField] private Animator animator;
+    
     private Vector3 startPosition;
     
     private Rigidbody2D rb;
@@ -39,6 +41,11 @@ public class EnemyMovement : MonoBehaviour
         rb.velocity = new Vector2(0,0);
         
         distance = Vector3.Distance(transform.position, startPosition);
+
+        if (rightDistance > 0 || leftDistance > 0)
+        {
+            animator.SetBool("IsWalking", true);
+        }
 
         if (transform.position.x < startPosition.x && distance >= leftDistance)
         {

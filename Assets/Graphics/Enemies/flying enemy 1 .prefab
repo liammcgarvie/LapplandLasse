@@ -401,3 +401,4 @@ MonoBehaviour:
   downDistance: 0
   speed: 0
   sprite: {fileID: 2443314719851228526}
+  animator: {fileID: 794514470770902619}
