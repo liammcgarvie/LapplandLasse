@@ -6,6 +6,11 @@ public class SceneChange : MonoBehaviour
 {
     public Animator animator;
 
+    [SerializeField] private AudioSource shit;
+    [SerializeField] private AudioSource huh;
+    [SerializeField] private AudioSource hmm;
+    [SerializeField] private AudioSource well;
+    
     private void Start()
     {
         StartCoroutine(WaitForAnimation());
@@ -43,5 +48,25 @@ public class SceneChange : MonoBehaviour
             yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 2);
             NextScene();
         }
+    }
+
+    public void ShitSound()
+    {
+        shit.Play();
+    }
+    
+    public void WellSound()
+    {
+        well.Play();
+    }
+    
+    public void HuhSound()
+    {
+        huh.Play();
+    }
+    
+    public void HmmSound()
+    {
+        hmm.Play();
     }
 }
