@@ -46,7 +46,7 @@ public class EnemyMovement : MonoBehaviour
             movingLeft = false;
             
             sprite.flipX = true;
-        }
+        } 
         
         if (transform.position.x > startPosition.x && distance >= rightDistance)
         {
@@ -55,7 +55,7 @@ public class EnemyMovement : MonoBehaviour
             
             sprite.flipX = false;
         }
-
+        
         if (transform.position.y < startPosition.y && distance >= downDistance)
         {
             movingDown = false;
