@@ -50,11 +50,6 @@ public class EnemyHookCollision : MonoBehaviour
             GroundedEnemyPull();
         }
 
-        if (pulling && isGrounded == false)
-        {
-            ElevatedEnemyPull();
-        }
-
         if (pullTarget)
         {
             if (Vector3.Distance(player.transform.position, pullTarget.position) <= offsetX + 0.5f)
@@ -109,29 +104,10 @@ public class EnemyHookCollision : MonoBehaviour
             pullTarget.position -= new Vector3(offsetX, 0, 0);
         }
     }
-
-    private void ElevatedEnemyPull()
-    {
-        playerAnimator.SetBool("isPulling", true);
-        
-        player.transform.position = playerPos;
-        
-        if (pullTarget.transform.position.x > player.transform.position.x)
-        {
-            pullTarget.position = rope.GetPosition(0);
-            pullTarget.position += new Vector3(offsetX, 0, 0);
-        }
-            
-        if (pullTarget.transform.position.x < player.transform.position.x)
-        {
-            pullTarget.position = rope.GetPosition(0);
-            pullTarget.position -= new Vector3(offsetX, 0, 0);
-        }
-    }
     
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && isGrounded)
         {
             OnHit.Invoke();
             playerPos = player.transform.position;
