@@ -44,12 +44,16 @@ public class EnemyMovement : MonoBehaviour
         {
             movingRight = true;
             movingLeft = false;
+            
+            sprite.flipX = true;
         }
         
         if (transform.position.x > startPosition.x && distance >= rightDistance)
         {
             movingRight = false;
             movingLeft = true;
+            
+            sprite.flipX = false;
         }
 
         if (transform.position.y < startPosition.y && distance >= downDistance)
@@ -71,13 +75,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (movingRight && !movingLeft)
         {
-            sprite.flipX = true;
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
 
         if (movingLeft && !movingRight)
         {
-            sprite.flipX = false;
             transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
         }
 
