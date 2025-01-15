@@ -95,8 +95,6 @@ public class GrapplingHookRevamped : MonoBehaviour
             isPressing = true;
         }
         
-        distance = Vector3.Distance(transform.position, grapplePoint);
-        
         rope.SetPosition(1, transform.position); //Makes sure that the rope does not disconnect from the player
         
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
@@ -156,6 +154,8 @@ public class GrapplingHookRevamped : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 grapplePoint = marker.transform.position;
+                
+                distance = Vector3.Distance(transform.position, grapplePoint);
                 
                 if (collider.CompareTag("Ground") && distance <= maxDistance)
                 {

@@ -546,7 +546,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 2641195189766255520}
   maxSpeed: 9.25
   jumpForce: 15
-  bounceForce: 15
+  bounceForce: 17
   swingForce: 0.2
   acceleration: 20
   deceleration: 40
@@ -624,9 +624,9 @@ DistanceJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 453.90375, y: -3.6341062}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.9733737
+  m_Distance: 4.5037894
   m_MaxDistanceOnly: 0
 --- !u!114 &8208040125333713388
 MonoBehaviour:
@@ -641,11 +641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  deathSound1: {fileID: 0}
-  deathSound2: {fileID: 0}
-  deathSound3: {fileID: 0}
-  deathSound4: {fileID: 0}
-  deathSound5: {fileID: 0}
   checkForRespawn:
     m_PersistentCalls:
       m_Calls:
@@ -673,6 +668,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97390b766459704191d40ee8bd6e56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound1: {fileID: 0}
+  deathSound2: {fileID: 0}
+  deathSound3: {fileID: 0}
+  deathSound4: {fileID: 0}
+  deathSound5: {fileID: 0}
   onRespawn:
     m_PersistentCalls:
       m_Calls:
