@@ -12,6 +12,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     
     private Vector3 startPosition;
+    
+    private Rigidbody2D rb;
 
     private bool movingRight;
     private bool movingLeft;
@@ -28,10 +30,14 @@ public class EnemyMovement : MonoBehaviour
         movingUp = true;
         movingDown = false;
         movingLeft = false;
+        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
+        rb.velocity = new Vector2(0,0);
+        
         distance = Vector3.Distance(transform.position, startPosition);
 
         if (transform.position.x < startPosition.x && distance >= leftDistance)
