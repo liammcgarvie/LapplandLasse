@@ -102,8 +102,15 @@ public class GrapplingHookRevamped : MonoBehaviour
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
         
         grappleHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, grappleLayer);
-        
-        enemyHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, enemyPullLayer);
+
+        if (isGrounded)
+        {
+            enemyHit = Physics2D.CircleCast(new Vector2(mouseWorldPos.x, mouseWorldPos.y), radius, Vector2.zero, 0, enemyPullLayer);
+        }
+        else if (isGrounded == false)
+        {
+            enemyHit = new RaycastHit2D();
+        }
 
         if (grappleHit.collider || enemyHit.collider)
         {
