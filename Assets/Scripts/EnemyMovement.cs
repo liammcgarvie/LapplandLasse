@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -28,10 +29,20 @@ public class EnemyMovement : MonoBehaviour
     {
         startPosition = transform.position;
 
-        movingRight = true;
+        if (rightDistance > 0 || leftDistance > 0)
+        {
+            movingLeft = false;
+            movingRight = true;
+        }
+        else
+        {
+            movingLeft = false;
+            movingRight = false;
+        }
+        
         movingUp = true;
         movingDown = false;
-        movingLeft = false;
+        
         
         rb = GetComponent<Rigidbody2D>();
     }
@@ -47,7 +58,7 @@ public class EnemyMovement : MonoBehaviour
             animator.SetBool("IsWalking", true);
         }
 
-        if (transform.position.x < startPosition.x && distance >= leftDistance)
+        if (transform.position.x < startPosition.x && distance > leftDistance && leftDistance > 0)
         {
             movingRight = true;
             movingLeft = false;
@@ -55,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
             sprite.flipX = true;
         } 
         
-        if (transform.position.x > startPosition.x && distance >= rightDistance)
+        if (transform.position.x > startPosition.x && distance > rightDistance && rightDistance > 0)
         {
             movingRight = false;
             movingLeft = true;
@@ -63,13 +74,13 @@ public class EnemyMovement : MonoBehaviour
             sprite.flipX = false;
         }
         
-        if (transform.position.y < startPosition.y && distance >= downDistance)
+        if (transform.position.y < startPosition.y && distance > downDistance)
         {
             movingDown = false;
             movingUp = true;
         }
         
-        if (transform.position.y > startPosition.y && distance >= upDistance)
+        if (transform.position.y > startPosition.y && distance > upDistance)
         {
             movingDown = true;
             movingUp = false;
@@ -84,18 +95,16 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
-
-        if (movingLeft && !movingRight)
+        else if (movingLeft && !movingRight)
         {
             transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
         }
-
+        
         if (movingUp && !movingDown)
         {
             transform.position += new Vector3(0, speed * Time.deltaTime, 0);
         }
-
-        if (movingDown && !movingUp)
+        else if (movingDown && !movingUp)
         {
             transform.position += new Vector3(0, -speed * Time.deltaTime, 0);
         }

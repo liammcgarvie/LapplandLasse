@@ -1256,11 +1256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: upDistance
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: downDistance
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6733060980212553052, guid: b7523cd169956a449a4c22296b2a1d34, type: 3}
       propertyPath: leftDistance
@@ -3131,12 +3131,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7214580746919969548, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
+      propertyPath: upDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214580746919969548, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: leftDistance
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7214580746919969548, guid: 06cf41f8b3f808f4392d53430755e405, type: 3}
       propertyPath: rightDistance
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
